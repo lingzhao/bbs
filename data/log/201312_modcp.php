@@ -1,0 +1,4 @@
+<?PHP exit;?>	1388332979	admin	1	218.11.179.133	login	post		GET={mod=modcp; action=login; op=post; searchsubmit=1; do=search; users=jxorosdv; }; POST={};
+<?PHP exit;?>	1388332987	admin	1	218.11.179.133	thread	post		GET={mod=modcp; action=thread; op=post; searchsubmit=1; do=search; users=jxorosdv; }; POST={};
+<?PHP exit;?>	1388332990	admin	1	218.11.179.133	thread	post		GET={mod=modcp; action=thread; op=post; do=search; users=jxorosdv; starttime=2013-10-31; endtime=2013-12-30; searchsubmit=true; }; POST={do=search; users=jxorosdv; starttime=2013-10-31; endtime=2013-12-30; searchsubmit=true; };
+<?PHP exit;?>	1388333003	admin	1	218.11.179.133	thread	post		GET={mod=modcp; action=thread; op=post; do=delete; delete={0=623; }; deletesubmit=true; nocredit=1; }; POST={do=delete; delete={0=623; }; deletesubmit=true; nocredit=1; };

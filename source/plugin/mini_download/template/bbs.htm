@@ -1,0 +1,239 @@
+<!--{block return}-->
+
+<style type="text/css">
+.recommend h2{color:#55adff; font-size:14px; font-weight:bold; text-indent:8px;}
+
+.recommend .leftIcon{width:27px; height:28px; position:absolute; left:5px; top:65px; background:url(source/plugin/mini_download/images/icon.png) 0 -28px no-repeat; z-index:3;}
+
+.recommend .rightIcon{width:27px; height:27px; position:absolute; right:5px; top:65px; background:url(source/plugin/mini_download/images/icon.png) 0 0 no-repeat; z-index:3;}
+
+
+.scrollimg {position:relative;height:150px;overflow:hidden;}
+
+.scrollimg-con {left:40px;position:absolute;width:91%;margin:0 auto;overflow:hidden;}
+
+.scrollimg-list {height:140px; margin-top:10px;zoom:1; padding:0 0px; }
+
+.scrollimg-list li {width:125px; float:left; display:inline; margin:auto; padding:0 0px;height:140px; overflow:hidden; text-align:center;}
+
+.scrollimg-list li a {color:#535353;margin:auto;text-align:center;}
+
+.scrollimg-list li a.pic {width:115px; height:120px; display:block; overflow:hidden;}
+
+.scrollimg-list li a.pic img {margin:1px auto; left:0; top:0; display:block; overflow:hidden; width:115px; height:120px;}
+
+</style>
+
+<script type="text/javascript">
+var Class = {
+	create:function(){
+		return function(){
+			this.initialize.apply(this,arguments);
+		};
+	}
+}
+var HScrollMover = Class.create();
+
+HScrollMover.getInstance = function(id){
+	if(this._instanceMap == null){
+		this._instanceMap = new Object();
+
+	}
+	for(var p in this._instanceMap){
+		if(id == p){
+			return this._instanceMap[p];
+		}
+	}
+	this._instanceMap[id] = new HScrollMover(id);
+	return this._instanceMap[id];
+}
+
+
+
+HScrollMover.prototype = {
+	initialize:function(id){
+		this.id = id;
+		this.moveOneTimer = 0;
+		this.movingTimer = 0;
+		this.moverNum = 8;
+	},
+	moveOne:function(direction,speed){
+		var id = this.id;
+		if(HScrollMover.getInstance(id).moveOneTimer != 0){
+			return;
+		}
+		if(!speed){
+			speed = 1;
+		}
+		var moveTimes = document.getElementById(id).offsetWidth/(speed*this.moverNum);
+		var tempMoveTimes = moveTimes;
+		var tempMoverNum = this.moverNum;
+		HScrollMover.getInstance(id).moveOneTimer = setInterval(function(){
+			moveTimes--;
+			var container = document.getElementById(id);
+			if(direction == "left"){
+				if(container.scrollLeft == container.scrollWidth - container.offsetWidth){
+					if (moveTimes == tempMoveTimes - 1) {
+						container.scrollLeft = 0;
+					}
+					moveTimes = 0;
+				} else {
+					container.scrollLeft += speed;
+				}
+			}else{
+				if(container.scrollLeft == 0){
+					container.scrollLeft = container.scrollWidth - speed*moveTimes;
+					moveTimes = 0;
+				} else if(container.scrollLeft < speed*moveTimes){
+					container.scrollLeft = 0;
+					moveTimes = 0;
+				} else {
+					container.scrollLeft -= speed;
+				}
+			}
+
+			if(moveTimes <= 0){
+				if(HScrollMover.getInstance(id).moveOneTimer != 0){
+					clearInterval(HScrollMover.getInstance(id).moveOneTimer);
+					HScrollMover.getInstance(id).moveOneTimer = 0;
+				}
+			}
+		},62);
+	}
+}
+
+
+
+
+var intervalId = 0;
+
+function clickRightScloll(){
+
+	if (document.all) {
+
+		document.getElementById('rightScrollBtn').click();
+
+	} else {
+
+		var evt = document.createEvent('HTMLEvents');
+
+		evt.initEvent('click',true,true);
+
+		element = document.getElementById('rightScrollBtn');
+
+		element.dispatchEvent(evt);
+
+	}
+
+}
+
+function autoScroll() {
+
+	if (document.getElementById("rightScrollBtn").className == 'rightIcon') {
+
+		intervalId = setInterval("clickRightScloll()",3*1000);
+
+		document.getElementById("scrollContainer").onmouseover = function(){
+
+			if(intervalId != 0){
+
+				clearInterval(intervalId);
+
+				intervalId = 0;
+
+			}
+
+		}
+
+
+
+		document.getElementById("scrollContainer").onmouseout = function(){
+
+			if(intervalId != 0){
+
+				clearInterval(intervalId);
+
+			}
+
+			intervalId = setInterval("clickRightScloll()",3*1000);
+
+		}
+
+
+
+	}
+
+}
+
+
+
+
+
+</script>
+
+    <div class="mn bm cl">
+        <div class="bm_h"><b>{lang mini_download:zuixingengxin}</b></div>
+
+
+    <div class="recommend">
+
+        <div id="scrollContainer" class="scrollimg">
+
+        	<div id="hContainer" class="scrollimg-con">
+
+				<div id="hContainerMask">
+
+		            <ul id="scrollList" class="scrollimg-list">
+
+ {loop $tuijians $key $tuijian}
+						<li><span><a href="<!--{if $config['html'] == 1}-->app_{$tuijian[id]}.html<!--{else}-->plugin.php?id=mini_download:index&mod=view&sid=$curl{$tuijian[id]}<!--{/if}-->" target="_blank" onfocus="this.blur()" class="pic" ><img class="png" src="<!--{if !empty($tuijian[pic])}-->{$tuijian[pic]}<!--{else}-->source/plugin/mini_download/images/nopic.jpg<!--{/if}-->" alt="$tuijian[title]" /></a><p><a href="<!--{if $config['html'] == 1}-->app_{$tuijian[id]}.html<!--{else}-->plugin.php?id=mini_download:index&mod=view&sid=$curl{$tuijian[id]}<!--{/if}-->" target="_blank" onfocus="this.blur()">$tuijian[title]</a></p></span></li>
+<!--{/loop}-->
+
+						<script type="text/javascript"> 
+
+							document.getElementById("hContainerMask").style.width = (120*140*2)+"px";
+
+						</script>
+
+		            </ul>
+
+            	</div>
+
+            </div>
+
+            <a href="#" class="leftIcon" id="leftScrollBtn"  ></a>
+
+          	<a href="#" class="rightIcon" id="rightScrollBtn" ></a>
+
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+
+    <script language="javascript">
+
+    document.getElementById("leftScrollBtn").onclick = function(){
+
+    	HScrollMover.getInstance('hContainer').moveOne('right',20);
+
+		return false;
+
+	};
+
+	document.getElementById("rightScrollBtn").onclick = function(){
+
+		HScrollMover.getInstance('hContainer').moveOne('left',20);
+
+		return false;
+
+	};
+
+    </script>
+
+
+
+<!--{/block}-->

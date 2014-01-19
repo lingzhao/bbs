@@ -1,0 +1,83 @@
+<table class="tb tb2 ">
+<tr><th colspan="15" class="partition">{lang mini_download:xinxigong}($counts){lang mini_download:tiao}</th></tr>
+</table>
+
+<table class="tb tb2 " style="border-bottom:1px dotted #DEEFFA">
+<tr>
+<td>
+ <form method="post" autocomplete="off" action="$appurl&p=index" name="applyform">
+ <input type="hidden" name="formhash" value="{FORMHASH}" />
+ <input class="keyword" type="text" name="title" value="" style="height:25px; line-height:25px; margin:0 8px 0 0; padding:0 5px; width:300px;float:left" />
+ <button type="submit" class="btn" style="border:1px #D4D4D4 solid; height:27px; float:left; width:70px; margin:0">{lang mini_download:search}</button>
+ </form>
+</td></tr></table> 
+
+<table class="tb tb2 ">
+<tr class="header">
+<th width="20"></th><th width="50">{lang mini_download:paixu}</th><th width="340">{$_G['cache']['plugin']['mini_download']['biaotiname']}</th><th></th><th>{lang mini_download:zhuangtai}</th><th>{lang mini_download:time}</th><th>{lang mini_download:caozuo}</th>
+</tr>
+<div>
+<ul class="tab1">
+		<li class="current"><a href="$appurl"><span>{lang mini_download:allxinxi}</span></a></li>
+        {loop $listclass $k $v}
+        	<li><a href="$appurl&c=$k"><span>$v</span></a></li>
+        {/loop}
+</ul>
+ </div>
+ 
+ <form method="post" autocomplete="off" action="$appurl&p=index" name="applyform">
+
+ <input type="hidden" name="formhash" value="{FORMHASH}" />
+  {loop $mythreads $key $mythread}
+  
+  <tr class="hover">
+  <td><input type="checkbox" class="checkbox" name="piliang[]" value="{$mythread[id]}"></td>
+    <td><input type="text" name="diynum[{$mythread[id]}]" value="{$mythread[diynum]}" size="4" /></td>
+    <td><input type="text" class="txt" name="title[{$mythread['id']}]" value="{$mythread[title]}" style="width:320px;" /></td>
+    <td>
+    <!--{if empty($mythread[topid])}-->
+    <a href="$appurl&p=topid&d=yes&id=$mythread[id]" onclick="return confirm('{lang mini_download:zhidingtishi}')">{lang mini_download:weizhiding}</a>  <span class="pipe">|</span>
+    <!--{else}-->
+    <a href="$appurl&p=topid&d=no&id=$mythread[id]" style="color: #F90">{lang mini_download:yizhiding}</a>  <span class="pipe">|</span>
+    <!--{/if}--> 
+    <!--{if empty($mythread[tuijian])}-->
+    <a href="$appurl&p=tuijian&tj=yes&id=$mythread[id]">{lang mini_download:weituijian}</a>  <span class="pipe">|</span>
+    <!--{else}-->
+    <a href="$appurl&p=tuijian&tj=no&id=$mythread[id]" style="color: #F90">{lang mini_download:yituijian}</a>  
+    <!--{/if}-->
+     <!--{if empty($mythread[display])}-->
+    <a href="$appurl&p=check&operation=yes&id=$mythread[id]" style="color:#F00">{lang mini_download:ddshenhe}</a>
+    <!--{else}-->
+    <a href="$appurl&p=check&operation=no&id=$mythread[id]" style="color:#090">{lang mini_download:ssok}</a>
+    <!--{/if}-->
+    </td>
+    <td>
+    {echo date('y-m-d',$mythread[dateline])}
+    </td>
+    <td>
+    <a href="$appurl&amp;p=edit&amp;id=$mythread[id]">{lang mini_download:bianji}</a> <a href="$appurl&amp;p=del&amp;id=$mythread[id]" onclick="return confirm('{lang mini_download:shanchutishi}')">{lang mini_download:shanchu}</a>
+    </td>
+  </tr>
+  {/loop}
+  <tr>
+  <table>
+  <input type="hidden" name="newid" value="{$mythread[id]}" size="1" />
+&nbsp;<input type="checkbox" onclick="checkAll('prefix', this.form, 'piliang')" class="checkbox" id="chkallxm8R" name="chkall"><label for="chkallxm8R">{lang mini_download:adminquanxuan}</label>
+&nbsp;&nbsp;<input type="submit" class="btn" id="applysubmitz" name="applysubmitz" value="{lang mini_download:admingengxinxinxi}" />
+&nbsp;&nbsp;<input type="submit" value="{lang mini_download:adminzhiding}" name="applysubmzd" id="applysubmzd" class="btn">
+&nbsp;&nbsp;<input type="submit" value="{lang mini_download:adminquxiaozhiding}" name="applysubmqxzd" id="applysubmqxzd" class="btn">
+
+&nbsp;<input type="submit" value="{lang mini_download:tuijian}" name="applysubmtj" id="applysubmtj" class="btn">
+&nbsp;<input type="submit" value="{lang mini_download:adminquxiaotuijian}" name="applysubmqxtj" id="applysubmqxtj" class="btn">
+
+&nbsp;&nbsp;<input type="submit" value="{lang mini_download:adminshenhe}" name="applysubmsh" id="applysubmsh" class="btn">
+&nbsp;&nbsp;<input type="submit" value="{lang mini_download:adminquxiaoshenhe}" name="applysubmqxsh" id="applysubmqxsh" class="btn">
+
+&nbsp;&nbsp;<input type="submit" class="btn" id="applysubmdel" name="applysubmdel" value="{lang mini_download:shanchu}" />
+  </table>
+  </tr>
+</form>  
+
+</table>
+
+<div class="cuspages right"><div class="pg">{$multis}</div></div>

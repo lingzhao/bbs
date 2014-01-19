@@ -1,0 +1,17 @@
+<!--{loop $mythreads $mythread}-->														
+
+	<h3 class="flb"><em>{lang mini_download:xiazaiyaokouchu}$config[credit] &nbsp;{$mythread['price']}&nbsp;{$mini_download['extcredits'][$config[softpaytype]]['title']}{lang mini_download:quedianxiazaima}<br>$config['freetime']{lang mini_download:buchongfukoufei}</em>
+	<span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span>
+    </h3>
+
+
+<br>
+<br>
+<center>
+<a class="pn pnc" href="javascript:;" onclick="showWindow('download', 'plugin.php?id=mini_download:index&mod=download&sid=$curl{$mythread[id]}'+REPORTURL);return false;" ><strong>{lang confirms}</strong></a>
+
+<a class="pn pnc" href="javascript:;" onclick="showWindow('paylistview', 'plugin.php?id=mini_download:index&mod=paylistview&sid=$curl{$mythread[id]}'+REPORTURL);return false;" ><strong>{lang mini_download:paylistview}</strong></a>
+      </center>          
+
+
+<!--{/if}--> 

@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5]]></item>
+	<item id="Time"><![CDATA[2012-1-7 1:43]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://www.571533.com/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[简易下载中心强化版]]></item>
+			<item id="identifier"><![CDATA[mini_download]]></item>
+			<item id="description"><![CDATA[可做一般下载栏目]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[mini_download/]]></item>
+			<item id="copyright"><![CDATA[花絮精品社区 www.huaxu.org]]></item>
+			<item id="version"><![CDATA[2.6]]></item>
+			<item id="__modules">
+
+				<item id="0">
+					<item id="name"><![CDATA[index]]></item>
+					<item id="menu"><![CDATA[下载]]></item>
+					<item id="url"><![CDATA[plugin.php?id=mini_download:index]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+
+
+				<item id="1">
+					<item id="name"><![CDATA[mini_download]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+
+				<item id="2">
+					<item id="name"><![CDATA[class2]]></item>
+					<item id="menu"><![CDATA[分类菜单设置]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[mini_download_admin]]></item>
+					<item id="menu"><![CDATA[资源管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+
+				<item id="5">
+					<item id="name"><![CDATA[mini_download_pinglun]]></item>
+					<item id="menu"><![CDATA[评论管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+
+				<item id="6">
+					<item id="name"><![CDATA[banner_admin]]></item>
+					<item id="menu"><![CDATA[首页幻灯片管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+				</item>
+
+
+
+
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5]]></item>
+		<item id="var">
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[开启系统]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ON]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[关闭提示]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[NOTICE]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[游客必须登陆后才能浏览]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[LOGIN]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[用户组限制]]></item>
+				<item id="description"><![CDATA[设置可以使用本系统的用户组。必须开启上面的登录浏览，此功能才有效]]></item>
+				<item id="variable"><![CDATA[GROUP]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[16]]></item>
+					<item id="7"><![CDATA[17]]></item>
+					<item id="8"><![CDATA[18]]></item>
+					<item id="9"><![CDATA[19]]></item>
+					<item id="10"><![CDATA[1]]></item>
+					<item id="11"><![CDATA[2]]></item>
+					<item id="12"><![CDATA[3]]></item>
+				</item>
+			</item>
+
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[栏目名称设置]]></item>
+				<item id="description"><![CDATA[设置该栏目名称]]></item>
+				<item id="variable"><![CDATA[t_title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[下载]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[title设置]]></item>
+				<item id="description"><![CDATA[浏览器Title标题]]></item>
+				<item id="variable"><![CDATA[navtitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[简易下载]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[插件栏目介绍]]></item>
+				<item id="description"><![CDATA[自定义description内容]]></item>
+				<item id="variable"><![CDATA[metadescription]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[简易下载插件，可做软件资源下载栏目]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[关键字设置]]></item>
+				<item id="description"><![CDATA[keywords 关键字定义，关键字直接用英文逗号隔开]]></item>
+				<item id="variable"><![CDATA[metakeywords]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[程序,源码,软件,更多关键字自定设]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[每页显示评论多少条]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[each]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[每页显示多少信息]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[eacha]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+			<item id="11">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[是否启用一级分类]]></item>
+				<item id="description"><![CDATA[如没需要，可关闭。关闭后，直接使用菜单设置里的分类菜单和二级菜单。自行合理使用此设置]]></item>
+				<item id="variable"><![CDATA[class1set]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+
+			<item id="12">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[一级分类设置]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[listclass]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[1=ASP
+2=PHP
+3=JSP
+4=更多分类自己定义]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+			<item id="13">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[是否启用菜单自定义功能]]></item>
+				<item id="description"><![CDATA[如没需要，可关闭。]]></item>
+				<item id="variable"><![CDATA[diyclassset]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+			<item id="14">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[菜单自定义]]></item>
+				<item id="description"><![CDATA[需要开启菜单自定义功能，此设置才生效。可在菜单栏内加入自己设置的菜单项目。按代码模板添加，避免乱版。如需多个分类，只需再复制一份<li></li>代码]]></item>
+				<item id="variable"><![CDATA[diyclass]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<LI>
+ <LABEL>自定义分类:</LABEL>
+ <p>
+<a href="网址" target="_blank">连接名称</a>
+<a href="网址" target="_blank">连接名称2</a>
+<a href="网址" target="_blank">连接名称3。。。</a>
+ </p>
+ </LI>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+
+			<item id="16">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[定义发布按钮的名字]]></item>
+				<item id="description"><![CDATA[默认：发 布 资 源，可自己定义名称。支持HTML，可做图片按钮]]></item>
+				<item id="variable"><![CDATA[fabusetname]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[发 布 资 源]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+			<item id="18">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[可以添加信息的用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[groups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[20]]></item>
+					<item id="7"><![CDATA[16]]></item>
+					<item id="8"><![CDATA[17]]></item>
+					<item id="9"><![CDATA[18]]></item>
+					<item id="10"><![CDATA[19]]></item>
+					<item id="11"><![CDATA[1]]></item>
+					<item id="12"><![CDATA[2]]></item>
+					<item id="13"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[用于接收信息审核通知的管理UID]]></item>
+				<item id="description"><![CDATA[设置您当前的管理UID号,用于接收审核通知，注：该功能仅用于接收信息]]></item>
+				<item id="variable"><![CDATA[groupso]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[是否开启发布审核]]></item>
+				<item id="description"><![CDATA[开启后，会员发布信息，需审核才显示]]></item>
+				<item id="variable"><![CDATA[displays]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[0 = 开启审核
+1 = 关闭审核]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[审核规则]]></item>
+				<item id="description"><![CDATA[前台用户发布审核规则，支持HTML]]></item>
+				<item id="variable"><![CDATA[shenheguizhe]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[审核规则，后台添加]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[开启评论审核]]></item>
+				<item id="description"><![CDATA[开启后，会员发布评论，需审核才显示，默认为关闭]]></item>
+				<item id="variable"><![CDATA[display]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[0 = 开启审核
+1 = 关闭审核]]></item>
+			</item>
+
+
+
+			<item id="24">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[评论奖励积分设置]]></item>
+				<item id="description"><![CDATA[会员评论积分奖励。如不奖励，选空或下面数量设置为0]]></item>
+				<item id="variable"><![CDATA[pinglunextcredita]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[评论奖励积分数量]]></item>
+				<item id="description"><![CDATA[如不奖励，请设置为0]]></item>
+				<item id="variable"><![CDATA[pinglunaddshuliang]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+
+
+
+
+			<item id="26">
+				<item id="displayorder"><![CDATA[26]]></item>
+				<item id="title"><![CDATA[封面图片大小]]></item>
+				<item id="description"><![CDATA[单位:字节,默认102400（100K）]]></item>
+				<item id="variable"><![CDATA[picdx]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[100240]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+
+			<item id="28">
+				<item id="displayorder"><![CDATA[28]]></item>
+				<item id="title"><![CDATA[选择用户发布资源的方式]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[uploadset]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[0 = 允许发外链资源与本地上传
+1 = 只允许发外链资源
+2 = 只开启本地上传]]></item>
+			</item>
+
+
+			<item id="29">
+				<item id="displayorder"><![CDATA[29]]></item>
+				<item id="title"><![CDATA[可上传附件大小]]></item>
+				<item id="description"><![CDATA[本地上传大小限制。单位:字节,默认10240000.请根据空间大小，合理设置，过大的资源，可能会因网络延迟等原因，导致上传失败。]]></item>
+				<item id="variable"><![CDATA[uploaddx]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10024000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+			<item id="30">
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[可上传附件格式]]></item>
+				<item id="description"><![CDATA[添加新格式用“,”号隔开，区分大小写，默认:rar,RAR,zip,ZIP,7z,7Z]]></item>
+				<item id="variable"><![CDATA[uptype]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[rar,RAR,zip,ZIP,7z,7Z]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+			<item id="31">
+				<item id="displayorder"><![CDATA[31]]></item>
+				<item id="title"><![CDATA[会员添加发布信息，是否给予奖励]]></item>
+				<item id="description"><![CDATA[注意：选择是，无论是否通过审核，都会奖励。]]></item>
+				<item id="variable"><![CDATA[addstart]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="32">
+				<item id="displayorder"><![CDATA[32]]></item>
+				<item id="title"><![CDATA[发布奖励积分名称]]></item>
+				<item id="description"><![CDATA[开启发布奖励，此功能才有效]]></item>
+				<item id="variable"><![CDATA[extcredita]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="33">
+				<item id="displayorder"><![CDATA[33]]></item>
+				<item id="title"><![CDATA[发布奖励积分数量]]></item>
+				<item id="description"><![CDATA[开启发布奖励，此功能才有效]]></item>
+				<item id="variable"><![CDATA[addshuliang]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+			<item id="35">
+				<item id="displayorder"><![CDATA[35]]></item>
+				<item id="title"><![CDATA[是否显示发布人]]></item>
+				<item id="description"><![CDATA[开启后，会显示发布资源的会员名。]]></item>
+				<item id="variable"><![CDATA[faburenset]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+
+			<item id="36">
+				<item id="displayorder"><![CDATA[36]]></item>
+				<item id="title"><![CDATA[自定义属性]]></item>
+				<item id="description"><![CDATA[设置属性名称,可设置8个。每个英文逗号","隔开。建议名称和顺序确定后，不要再随意更改，避免影响前台显示。不定义不显示]]></item>
+				<item id="variable"><![CDATA[sd]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[大小,版本,授权,平台,自定义5,]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="37">
+				<item id="displayorder"><![CDATA[37]]></item>
+				<item id="title"><![CDATA[标题填项名称定义]]></item>
+				<item id="description"><![CDATA[默认：名称。可修改为其它名称，如：软件名称、游戏名称等]]></item>
+				<item id="variable"><![CDATA[biaotiname]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[名称]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+
+			<item id="39">
+				<item id="displayorder"><![CDATA[39]]></item>
+				<item id="title"><![CDATA[是否开启静态化]]></item>
+				<item id="description"><![CDATA[需要配合静态规则（个别页面还是动态），详情见插件更新说明。不支持的服务器，选择否即可。]]></item>
+				<item id="variable"><![CDATA[html]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+			<item id="40">
+				<item id="displayorder"><![CDATA[40]]></item>
+				<item id="title"><![CDATA[公告]]></item>
+				<item id="description"><![CDATA[滚动公告设置]]></item>
+				<item id="variable"><![CDATA[gonggao]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+
+			<item id="41">
+				<item id="displayorder"><![CDATA[41]]></item>
+				<item id="title"><![CDATA[底部横幅广告位]]></item>
+				<item id="description"><![CDATA[页面底部横幅广告代码，留空则不显示，支持HTML]]></item>
+				<item id="variable"><![CDATA[footad]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[我是横幅广告位，后台设置]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+			<item id="42">
+				<item id="displayorder"><![CDATA[42]]></item>
+				<item id="title"><![CDATA[列表页面右侧广告]]></item>
+				<item id="description"><![CDATA[自定义代码，宽度270px。留空则不显示]]></item>
+				<item id="variable"><![CDATA[ad]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[广告位，后台设置]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+
+			<item id="44">
+				<item id="displayorder"><![CDATA[44]]></item>
+				<item id="title"><![CDATA[用户发布是否可以设置价格]]></item>
+				<item id="description"><![CDATA[开启后，发布时，可设置价格，管理员不受此限制]]></item>
+				<item id="variable"><![CDATA[softpayset]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+
+			<item id="45">
+				<item id="displayorder"><![CDATA[45]]></item>
+				<item id="title"><![CDATA[付费下载所消费积分名称]]></item>
+				<item id="description"><![CDATA[选择扣费积分类型]]></item>
+				<item id="variable"><![CDATA[softpaytype]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+
+			<item id="46">
+				<item id="displayorder"><![CDATA[46]]></item>
+				<item id="title"><![CDATA[付费后多久内不用再付费]]></item>
+				<item id="description"><![CDATA[单位：小时，同客户机下的免费时间]]></item>
+				<item id="variable"><![CDATA[freetime]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[24]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+			<item id="47">
+				<item id="displayorder"><![CDATA[47]]></item>
+				<item id="title"><![CDATA[免费下载用户组]]></item>
+				<item id="description"><![CDATA[设置无需消耗积分也可以直接下载的用户组]]></item>
+				<item id="variable"><![CDATA[free]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+
+
+
+			<item id="48">
+				<item id="displayorder"><![CDATA[48]]></item>
+				<item id="title"><![CDATA[插件主色设置]]></item>
+				<item id="description"><![CDATA[设置插件的色彩，可以是色彩代码或英文。默认为：#1BA1E2 （蓝色）]]></item>
+				<item id="variable"><![CDATA[color]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[#1BA1E2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+			<item id="49">
+				<item id="displayorder"><![CDATA[49]]></item>
+				<item id="title"><![CDATA[插件文字色彩设置]]></item>
+				<item id="description"><![CDATA[配合主色设置使用，只有带有底色的文字，才有效。默认为：#ffffff （白色）]]></item>
+				<item id="variable"><![CDATA[textcolor]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[#ffffff]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+
+
+			<item id="50">
+				<item id="displayorder"><![CDATA[50]]></item>
+				<item id="title"><![CDATA[是否开启首页幻灯片]]></item>
+				<item id="description"><![CDATA[关闭则不显示]]></item>
+				<item id="variable"><![CDATA[bannerset]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+			<item id="52">
+				<item id="displayorder"><![CDATA[52]]></item>
+				<item id="title"><![CDATA[是否开启论坛调用]]></item>
+				<item id="description"><![CDATA[开启后,论坛首页底部将显示相关资源信息，如遇到和其它插件或风格模板有冲突，请关闭此调用功能。]]></item>
+				<item id="variable"><![CDATA[bbs]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+
+			<item id="53">
+				<item id="displayorder"><![CDATA[53]]></item>
+				<item id="title"><![CDATA[论坛首页调用数量]]></item>
+				<item id="description"><![CDATA[需开启论坛调用，设置才有效]]></item>
+				<item id="variable"><![CDATA[bbsshuliang]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+
+
+
+
+
+
+
+
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="huiyuanpinglun"><![CDATA[会员评论]]></item>
+				<item id="huiyuanmingcheng"><![CDATA[会员名称]]></item>
+				<item id="pinglunneirong"><![CDATA[评论内容]]></item>
+				<item id="time"><![CDATA[时间]]></item>
+				<item id="caozuo"><![CDATA[操作]]></item>
+				<item id="zhuangtai"><![CDATA[状态]]></item>
+				<item id="tianjiaok"><![CDATA[添加成功]]></item>
+				<item id="tianjiaokandshangchuang"><![CDATA[添加成功]]></item>
+				<item id="tianjiafenlei"><![CDATA[添加分类菜单]]></item>
+				<item id="tianjiaerjicaidan"><![CDATA[添加二级菜单]]></item>
+				<item id="xuanzemingcheng"><![CDATA[请选择名称]]></item>
+				<item id="buzu"><![CDATA[不足]]></item>
+				<item id="youkewuquanxian"><![CDATA[游客无权进行操作,请您先登录]]></item>
+				<item id="youkewuquanxianliuyan"><![CDATA[游客无权发表任何言论,请先登录注册...]]></item>
+				<item id="bianjiok"><![CDATA[编辑成功]]></item>
+				<item id="shanchu"><![CDATA[删除]]></item>
+				<item id="shanchufenlei"><![CDATA[删除分类]]></item>
+				<item id="fenleiname"><![CDATA[分类名称]]></item>
+				<item id="shanchuok"><![CDATA[删除成功!]]></item>
+				<item id="tutaida"><![CDATA[您上传的图片太大]]></item>
+				<item id="uploadtaida"><![CDATA[上传失败，您上传的附件过大，已超出本站允许范围]]></item>
+				<item id="dengdaishenhetishi"><![CDATA[您的信息已提交，等待管理员审核!]]></item>
+				<item id="xinxitongzhi"><![CDATA[有新的会员提交了资源下载信息,请求通过审核!]]></item>
+				<item id="bunengchongfudengji"><![CDATA[您已提交过该资源信息，请勿重复登记!]]></item>
+				<item id="wuquanxiantianjia"><![CDATA[您所属的用户组无权添加任何信息!]]></item>
+				<item id="biaotibunengkong"><![CDATA[标题不能为空!]]></item>
+				<item id="neirongbunengweikong"><![CDATA[内容不能为空]]></item>
+				<item id="zhiyunxu"><![CDATA[封面图片只允许上传jpg、gif、png格式]]></item>
+				<item id="uploadzhiyunxu"><![CDATA[不允许上传此类型附件，请更换后，重新上传]]></item>
+				<item id="pinglunok"><![CDATA[评论发表成功]]></item>
+				<item id="xinxigengxinok"><![CDATA[更新成功]]></item>
+				<item id="dengdaishenhe"><![CDATA[等待审核]]></item>
+				<item id="shenheok"><![CDATA[审核通过!]]></item>
+				<item id="pingbiok"><![CDATA[屏蔽成功!]]></item>
+				<item id="zhidingok"><![CDATA[置顶成功]]></item>
+				<item id="quxiaozhiding"><![CDATA[取消置顶]]></item>
+				<item id="tuijianok"><![CDATA[推荐成功！]]></item>
+				<item id="quxiaotuijian"><![CDATA[已取消推荐！]]></item>
+				<item id="weidingyicaozuo"><![CDATA[未定义操作!]]></item>
+				<item id="zhengchangxianshi"><![CDATA[正常显示]]></item>
+				<item id="querenshanchutishi"><![CDATA[确认删除该资源信息?]]></item>
+				<item id="querenshanchu"><![CDATA[确定删除]]></item>
+				<item id="quxiaoshanchu"><![CDATA[取消]]></item>
+				<item id="paixu"><![CDATA[排序]]></item>
+				<item id="shagnchuanchenggong"><![CDATA[上传成功]]></item>
+				<item id="tupianguanli"><![CDATA[截图管理]]></item>
+				<item id="photopic"><![CDATA[演示图片]]></item>
+				<item id="tucemingcheng"><![CDATA[资源名称]]></item>
+				<item id="fbshijian"><![CDATA[发表时间]]></item>
+				<item id="caozuoss"><![CDATA[操作]]></item>
+				<item id="suozaiyonghuzubunengshiyong"><![CDATA[对不起，您所在的用户组不能使用本系统]]></item>
+				<item id="dangqianyemianbucunzai"><![CDATA[当前页面不存在]]></item>
+				<item id="xiaohaotishi"><![CDATA[抱歉，下载需要消耗]]></item>
+				<item id="wufaliulan"><![CDATA[，您目前的余额不足。]]></item>
+
+			</item>
+
+
+
+
+			<item id="templatelang">
+				<item id="bujiaru"><![CDATA[不加入]]></item>
+				<item id="shifoutuijian"><![CDATA[是否推荐]]></item>
+				<item id="yes"><![CDATA[是]]></item>
+				<item id="no"><![CDATA[否]]></item>
+				<item id="tuijian"><![CDATA[推荐]]></item>
+				<item id="zanwuxinxi"><![CDATA[暂无资源信息]]></item>
+				<item id="faburen"><![CDATA[发布人]]></item>
+				<item id="fabutime"><![CDATA[发布时间]]></item>
+				<item id="wangyoupingfen"><![CDATA[网友评分]]></item>
+				<item id="pingfen"><![CDATA[评分]]></item>
+				<item id="zanwupingfen"><![CDATA[暂无评分]]></item>
+				<item id="zanwujieshao"><![CDATA[暂无任何内容介绍!]]></item>
+				<item id="fen"><![CDATA[分]]></item>
+				<item id="search"><![CDATA[搜索]]></item>
+				<item id="pinglun"><![CDATA[评论]]></item>
+				<item id="tijiaopinglun"><![CDATA[提交评论]]></item>
+				<item id="tijiaoxinxi"><![CDATA[提交信息]]></item>
+				<item id="shurumingcheng"><![CDATA[请输入名称]]></item>
+				<item id="fenlei"><![CDATA[分类]]></item>
+				<item id="xuanzefenlei"><![CDATA[请选择所属分类]]></item>
+				<item id="mingcheng"><![CDATA[名称]]></item>
+				<item id="fengmian"><![CDATA[封面图片]]></item>
+				<item id="daxiaoxianzhi"><![CDATA[大小限制：]]></item>
+				<item id="homeurl"><![CDATA[官方网站]]></item>
+				<item id="nohttp"><![CDATA[输入网址，但不要加入http://]]></item>
+				<item id="queding"><![CDATA[确定]]></item>
+				<item id="quxiao"><![CDATA[取消]]></item>
+				<item id="info"><![CDATA[详细介绍]]></item>
+				<item id="xinxixiugai"><![CDATA[信息修改]]></item>
+				<item id="time"><![CDATA[时间]]></item>
+				<item id="xinxigong"><![CDATA[信息共]]></item>
+				<item id="tiao"><![CDATA[条]]></item>
+				<item id="zhuangtai"><![CDATA[状态]]></item>
+				<item id="caozuo"><![CDATA[操作]]></item>
+				<item id="allxinxi"><![CDATA[所有资源]]></item>
+				<item id="zhidingtishi"><![CDATA[确认要置顶吗?]]></item>
+				<item id="weizhiding"><![CDATA[未置顶]]></item>
+				<item id="yizhiding"><![CDATA[已置顶]]></item>
+				<item id="weituijian"><![CDATA[未推荐]]></item>
+				<item id="yituijian"><![CDATA[已推荐]]></item>
+				<item id="benzhantuijian"><![CDATA[本站推荐]]></item>
+				<item id="tuijianxingji"><![CDATA[推荐星级]]></item>
+				<item id="wutuijian"><![CDATA[暂无推荐]]></item>
+				<item id="ddshenhe"><![CDATA[等待审核]]></item>
+				<item id="ssok"><![CDATA[审核成功]]></item>
+				<item id="bianji"><![CDATA[编辑]]></item>
+				<item id="shanchu"><![CDATA[删除]]></item>
+				<item id="shanchutishi"><![CDATA[您确认要删除吗?这将不可恢复!]]></item>
+				<item id="tijiaogengxin"><![CDATA[提交更新]]></item>
+				<item id="quanbu"><![CDATA[全部]]></item>
+				<item id="yijifenlei"><![CDATA[一级分类:]]></item>
+				<item id="erjifenlei"><![CDATA[二级分类:]]></item>
+				<item id="shaixuan"><![CDATA[筛选:]]></item>
+				<item id="daoxu"><![CDATA[倒序]]></item>
+				<item id="paixu"><![CDATA[排序]]></item>
+				<item id="guanlizhongxin"><![CDATA[管理中心]]></item>
+				<item id="guanlimianban"><![CDATA[管理面板]]></item>
+				<item id="addxinxi"><![CDATA[添加资源]]></item>
+				<item id="xinxilist"><![CDATA[资源列表]]></item>
+				<item id="shenheguize"><![CDATA[审核规则]]></item>
+				<item id="dianjijinru"><![CDATA[点击进入]]></item>
+				<item id="wu"><![CDATA[暂无]]></item>
+				<item id="fabuyu"><![CDATA[发布于]]></item>
+				<item id="dianjitupianfangda"><![CDATA[点击图片放大]]></item>
+				<item id="tianjiatupian"><![CDATA[截图管理]]></item>
+				<item id="xuanzemingcheng"><![CDATA[选择资源名称]]></item>
+				<item id="jietushangchuan"><![CDATA[上传截图]]></item>
+				<item id="tupianshuoming"><![CDATA[图片说明]]></item>
+				<item id="tupianliebiao"><![CDATA[资源截图列表]]></item>
+				<item id="ok"><![CDATA[提交]]></item>
+				<item id="notuce"><![CDATA[尚未添加资源]]></item>
+				<item id="tishixinxi"><![CDATA[提示信息]]></item>
+				<item id="appphoto"><![CDATA[资源截图]]></item>
+				<item id="nophoto"><![CDATA[暂无截图]]></item>
+                                <item id="xinxigengxinok"><![CDATA[更新成功]]></item>
+                                <item id="index"><![CDATA[首页]]></item>
+                                <item id="list"><![CDATA[分类列表]]></item>
+                                <item id="zuixingengxin"><![CDATA[最新更新]]></item>
+                                <item id="xiazai"><![CDATA[下载]]></item>
+                                <item id="xiazaimingcheng"><![CDATA[下载名称]]></item>
+                                <item id="xiazaimingchengbeizhu"><![CDATA[多个下载，请换行输入，对应下面的下载地址，也可留空]]></item>
+                                <item id="xiazaidizhi"><![CDATA[下载地址]]></item>
+                                <item id="http"><![CDATA[每行一个下载地址]]></item>
+                                <item id="addguanlitishi"><![CDATA[以下功能只有管理员可操作，普通用户看不到]]></item>
+                                <item id="fenxiang"><![CDATA[分享]]></item>
+                                <item id="fankui"><![CDATA[反馈]]></item>
+                                <item id="chakanxiangqing"><![CDATA[查看详情]]></item>
+                                <item id="chakancishu"><![CDATA[人气]]></item>
+                                <item id="downlist"><![CDATA[下载列表]]></item>
+                                <item id="price"><![CDATA[价格]]></item>
+                                <item id="upload"><![CDATA[上传附件]]></item>
+                                <item id="bendidown"><![CDATA[本地下载]]></item>
+				<item id="xiaohaotishi"><![CDATA[下载本资源需要消耗]]></item>
+				<item id="xiaohaotishi2"><![CDATA[，确定下载吗？]]></item>
+				<item id="xiazaiyaokouchu"><![CDATA[下载要扣除：]]></item>
+				<item id="quedianxiazaima"><![CDATA[，您确定下载吗？]]></item>
+				<item id="buchongfukoufei"><![CDATA[小时内重复下载，不会重复扣费。]]></item>
+                                <item id="tishi"><![CDATA[消费提示]]></item>
+                                <item id="paytixing"><![CDATA[提醒：此资源为付费资源，需付费后才能下载，以下为预览下载列表内容]]></item>
+                                <item id="bannerurl"><![CDATA[链接]]></item>
+				<item id="bannerbeizhu"><![CDATA[（如要显示上传的图片，外链图片地址必须清空)]]></item>
+				<item id="bannerjietu"><![CDATA[横幅图片]]></item>
+				<item id="bannerscjietu"><![CDATA[上传图片]]></item>
+				<item id="bannerwljietu"><![CDATA[外链图片地址]]></item>
+				<item id="bannerlist"><![CDATA[横幅列表]]></item>
+				<item id="banneradd"><![CDATA[添加横幅]]></item>
+				<item id="weixiantupian"><![CDATA[图片上传失败，请重新上传]]></item>
+				<item id="maohao"><![CDATA[：]]></item>
+				<item id="renqipaihang"><![CDATA[人气排行]]></item>
+				<item id="xiazaipaihang"><![CDATA[下载排行]]></item>
+				<item id="xiaobianjianping"><![CDATA[小编简评：]]></item>
+				<item id="fufeiziyuan"><![CDATA[付费资源]]></item>
+				<item id="payshuliang"><![CDATA[付费数]]></item>
+				<item id="moren"><![CDATA[默认]]></item>
+	                        <item id="paylistview"><![CDATA[预览下载列表]]></item>
+                                <item id="xiazaiyulan"><![CDATA[付费资源下载列表预览]]></item>
+
+                                <item id="adminquanxuan"><![CDATA[全选]]></item>
+                               <item id="adminzhiding"><![CDATA[置顶]]></item>
+                               <item id="adminshenhe"><![CDATA[审核]]></item>
+                               <item id="adminquxiaozhiding"><![CDATA[取消置顶]]></item>
+                               <item id="adminquxiaoshenhe"><![CDATA[取消审核]]></item>
+                               <item id="adminquxiaotuijian"><![CDATA[取消推荐]]></item>
+                               <item id="admingengxinxinxi"><![CDATA[更新信息]]></item>
+
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	</item>
+</root>

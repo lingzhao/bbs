@@ -1,0 +1,225 @@
+<!--{loop $mythreads $mythread}-->														
+							<!--顶部 -->
+<div id="pt" class="bm cl">
+    <div class="z">
+        <a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em>
+        <a href="forum.php">$_G[setting][bbname]</a><em>&raquo;</em>
+		<a href="<!--{if $html == 1}-->down.html<!--{else}-->plugin.php?id=mini_download:index<!--{/if}-->">{$_G['cache']['plugin']['mini_download']['t_title']}</a><em>&raquo;</em>
+		{$mythread[title]}
+    </div>
+	<!--{if $_G['groupid']=="1"}-->
+    <div class="y">
+<a href="plugin.php?id=mini_download:mini_download_user">{lang mini_download:guanlimianban}</a>
+    </div>
+	<!--{/if}-->
+
+</div>
+<!--顶部 -->
+
+
+
+
+
+
+<div id="contenter" style="border:1px {$_G['cache']['plugin']['mini_download']['color']} solid;">
+    <div class="container">
+        <div class="deleft">
+            <div class="deinfo">
+<img style="cursor:pointer;width:100%;width:180px;height:180px;margin:auto;overflow:hidden;display:block;}" title="{$view['title']}" onclick="zoom(this, '', 1)" src="<!--{if !empty($mythread[pic])}-->{$mythread[pic]}<!--{else}-->source/plugin/mini_download/images/nopic.jpg<!--{/if}-->" alt="{$mythread[title]}"/>
+                <p>
+				<!--{if $mythread[price] == 0||(in_array($_G['groupid'], $free)||$mythread[author] == $_G['username']||$_COOKIE['free']==$sid)}-->
+
+ <a href="javascript:;" onclick="showWindow('freedown', 'plugin.php?id=mini_download:index&mod=freedown&sid=$curl{$mythread[id]}'+REPORTURL);return false;" >
+<img src="source/plugin/mini_download/images/freedown.jpg" alt="{$mythread[title]}"/></a>
+			<!--{else}-->
+			<a href="javascript:;" onclick="showWindow('pay', 'plugin.php?id=mini_download:index&mod=pay&sid=$curl{$mythread[id]}'+REPORTURL);return false;" ><img src="source/plugin/mini_download/images/paydown.jpg" alt="{$mythread[title]}"/></a>
+
+			<!--{/if}-->
+			
+			<br />
+					<!--{if $faburenset=='1'}--><strong>{lang mini_download:faburen}:</strong>&nbsp;{$mythread[author]}<br /><!--{/if}-->
+                     <!--{if !empty($mythread['sd1'])}-->
+                    <strong>$sd[0]:</strong>&nbsp;{$mythread['sd1']}<br />
+                     <!--{/if}-->
+
+                     <!--{if !empty($mythread['sd2'])}-->
+                     <strong>$sd[1]:</strong>&nbsp;{$mythread['sd2']}<br />
+                     <!--{/if}-->
+
+                     <!--{if !empty($mythread['sd3'])}-->
+                     <strong>$sd[2]:</strong>&nbsp;{$mythread['sd3']}<br />
+                     <!--{/if}-->
+
+                     <!--{if !empty($mythread['sd4'])}-->
+                     <strong>$sd[3]:</strong>&nbsp;{$mythread['sd4']}<br />
+                     <!--{/if}-->
+                     <!--{if !empty($mythread['sd5'])}-->
+                     <strong>$sd[4]:</strong>&nbsp;{$mythread['sd5']}<br />
+                     <!--{/if}-->
+
+                     <!--{if !empty($mythread['sd6'])}-->
+                     <strong>$sd[5]:</strong>&nbsp;{$mythread['sd6']}<br />
+                     <!--{/if}-->
+                     <!--{if !empty($mythread['sd7'])}-->
+                     <strong>$sd[6]:</strong>&nbsp;{$mythread['sd7']}<br />
+                     <!--{/if}-->
+                     <!--{if !empty($mythread['sd8'])}-->
+                     <strong>$sd[7]:</strong>&nbsp;{$mythread['sd8']}<br />
+                     <!--{/if}-->
+                     <!--{if $mythread[price] != 0}-->
+					 <strong>{lang mini_download:payshuliang}:</strong>&nbsp;{$mythread['pay']}<br />
+                     <!--{/if}-->
+
+                </p>
+
+            </div>
+
+
+
+            <div class="publisher">
+                <h2>{lang mini_download:benzhantuijian}</h2>
+        <ul>
+
+    
+<!--{if $sjs}-->        
+    {loop $sjs $key $sj}
+        <li>
+            <a href="<!--{if $html == 1}-->down_$curl{$sj[id]}.html<!--{else}-->plugin.php?id=mini_download:index&mod=view&sid=$curl{$sj[id]}<!--{/if}-->" title="{$sj[title]}"target="_blank">
+            <img src="<!--{if !empty($sj[pic])}-->{$sj[pic]}<!--{else}-->source/plugin/mini_download/images/nopic.jpg<!--{/if}-->" alt="{$sj[jianping]}" /></a>
+            <a class="name" href="<!--{if $html == 1}-->down_$curl{$sj[id]}.html<!--{else}-->plugin.php?id=mini_download:index&mod=view&sid=$curl{$sj[id]}<!--{/if}-->"title="{$sj[title]}" target="_blank">{$sj[title]}</a>
+            <p>
+                {lang mini_download:chakancishu}{lang mini_download:maohao}<span class="newdate">{$sj[view]}</span><br>
+                {lang mini_download:xiazai}{lang mini_download:maohao}<span class="newdate">{$sj[down]}</span><br>
+{lang mini_download:pingfen}{lang mini_download:maohao}<!--{if round($sj[total]/$sj[voter],1) != 0}-->{echo round
+($sj[total]/$sj[voter],1)}<!--{else}-->0<!--{/if}--></span>
+			</p>
+        </li>
+
+                        {/loop} 
+     <!--{/if}-->
+
+        </ul>
+            </div>
+
+        </div>
+
+        <div class="deright">
+
+            <div class="info">
+
+                <div class="star">
+                    <div class="starbasic star{$mythread['star']}" title="{lang mini_download:tuijianxingji}"></div>
+                    <span class="ff" title="{lang mini_download:wangyoupingfen}">
+                        <!--{if round($mythread[total]/$mythread[voter],1) != 0}-->{echo round
+($mythread[total]/$mythread[voter],1)}<!--{else}-->0<!--{/if}--></span>{lang mini_download:fen}<br />
+                </div>
+
+                <h1>{$mythread['title']}<!--{if $_G[uid] == $mythread[uid]||$_G['groupid']=="1" }--><a href="plugin.php?id=mini_download:mini_download_user&p=edit&sid={$mythread[id]}" style="FONT-SIZE: 12px; COLOR: red">[{lang mini_download:bianji}]</a><!--{/if}--></h1>
+
+                <p class="dgbg" style="display: block">
+
+                    <span class="digua">{lang mini_download:xiaobianjianping}</span>{$mythread['jianping']}
+
+                </p>
+                <p>{$mythread['info']}</p>
+
+            </div>
+
+            <div class="down">
+        		<div class="title"  style="border-bottom:2px {$_G['cache']['plugin']['mini_download']['color']} solid; margin-bottom:10px;">
+					<h2 style="background: {$_G['cache']['plugin']['mini_download']['color']};"><font color={$_G['cache']['plugin']['mini_download']['textcolor']}>{lang mini_download:pinglun}</font></h2>
+				</div>
+      
+  </div>
+
+
+<!-- 评论列表 -->
+<!--{if $count != 0}-->
+<div class="pl">
+        {loop $pls $pl}
+<div class="pl2">
+<span class="y">$pl[dateline]</span><img src="{$uc}/avatar.php?uid={$pl[uid]}&size=small" width="20" height="20">$pl[author]:
+<p class="view_evepost_cont"><div class="m5 view_content">$pl[message]</div></p>
+</div>
+ {/loop}
+{$multi}
+</div>
+<!--{/if}--> 
+  <!-- 评论列表 -->
+     
+  <!-- 评论框 --> 
+<div id="pingluns" class="cl">
+<dl>
+<form method="post" action="plugin.php?id=mini_download:index&applysubmit=true" name="applyform">
+    <input type="hidden" name="display" id="display" value="$mythread[display]" />
+    <input type="hidden" name="sid" id="sid" value="{$mythread[id]}" />
+    <input type="hidden" name="formhash" value="{FORMHASH}" />
+		<dt>
+        <strong>
+            <label><input type="radio" name="total" value="1" id="RadioGroup1_0" />&nbsp;1{lang mini_download:fen}</label>&nbsp;
+            <label><input type="radio" name="total" value="2" id="RadioGroup1_1" />&nbsp;2{lang mini_download:fen}</label>&nbsp;
+            <label><input type="radio" name="total" value="3" id="RadioGroup1_1" />&nbsp;3{lang mini_download:fen}</label>&nbsp;
+            <label><input type="radio" name="total" value="4" id="RadioGroup1_1" />&nbsp;4{lang mini_download:fen}</label>&nbsp;
+            <label><input type="radio" name="total" value="5" id="RadioGroup1_1" />&nbsp;5{lang mini_download:fen}</label>&nbsp;</strong>
+          </dt>  
+        <dd id="textareas"><textarea rows="5" cols="90" name="message" class="pt" id="replymessage" onkeyup="checkLength(this);"></textarea></dd>
+        <dd id="buttons"> <button type="submit" name="applysubmit" id="applysubmit" value="true" style="background:{$_G['cache']['plugin']['mini_download']['color']};color:#fff;"/>{lang mini_download:tijiaopinglun}</button></dd>
+</form>
+</dl> 
+</div>
+  <!-- 评论框 -->	
+
+
+
+<!-- 排行 -->
+            <div class="detanew">
+
+                <div class="title" style="border-bottom:2px {$_G['cache']['plugin']['mini_download']['color']} solid;">
+
+                    <ul>
+
+                        <li class="qh"  style="background: {$_G['cache']['plugin']['mini_download']['color']};"><font color={$_G['cache']['plugin']['mini_download']['textcolor']}>{lang mini_download:xiazaipaihang}</font></li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="denews" id="appNews">
+<ul>
+
+    <!--{if $renqis}-->        
+    {loop $renqis $key $renqi}
+
+            <li><span class="n1"><img src="<!--{if !empty($renqi[pic])}-->{$renqi[pic]}<!--{else}-->source/plugin/mini_download/images/nopic.jpg<!--{/if}-->" title="{$renqi[title]}" width="25" height="25"></span>
+
+            <span class="n2">
+            <a href="<!--{if $html == 1}-->down_$curl{$renqi[id]}.html<!--{else}-->plugin.php?id=mini_download:index&mod=view&sid=$curl{$renqi[id]}<!--{/if}-->" title="{$renqi[title]}" target="_blank">{$renqi[title]}</a>
+            </span>
+
+            <span class="n3">{$renqi[down]}</span></li>
+
+         {/loop}
+<!--{/if}-->       
+
+</ul>
+                </div>
+
+
+
+            </div>
+<!-- 排行 -->
+
+
+
+        </div>
+
+    </div>
+
+
+
+    </div>
+
+  <div style="width:960px; height:auto; overflow:hidden;">{$_G['cache']['plugin']['mini_download']['footad']}</div>
+
+<!--{/if}--> 

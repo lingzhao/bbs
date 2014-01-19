@@ -1,0 +1,274 @@
+<style>
+.ct_list{ font-size:12px; margin-top:5px;}
+.ct_list tr:hover td{ background:#e9f5f9;}
+.ct_list tr th{ background:#eee; padding:9px 10px 8px; font-weight:400; color:#666;}
+.ct_list tr td{ padding:14px 10px 12px;text-align:left; border-bottom:1px dashed #ededed;}
+</style>
+
+<script language="javascript">
+<!--
+	function validate(heform) {
+		
+		if(heform.title.value == "") {
+			showError('{lang mini_download:shurumingcheng}');
+			return false;
+		} 
+		
+
+		return true;
+	}
+-->
+</SCRIPT>
+
+
+
+    <ul>
+        <form action="" method="post" enctype="multipart/form-data" name="applyform" id="applyform" onsubmit="return validate(this)">
+        <input type="hidden" name="formhash" value="{FORMHASH}" />
+        <input type="hidden" name="display" id="display" value="$active[display]" />
+        <input type="hidden" name="uid" id="uid" value="$active[uid]" />
+        <input type="hidden" name="username" id="username" value="$active[username]" />
+        <input type="hidden" name="diynum" id="diynum" value="50" />
+        <div class="tablesx">
+        <table class="ct_list" width="100%">
+        <tr>
+              <td width="100">{lang mini_download:fenlei}</td>
+              <td><label>
+			  <!--1级分类 -->
+<!--{if $class1set== 1}-->
+                <select name="acid" id="acid">
+                {loop $listclass $k $v}
+                <option value="$k" {if $k==$active[cid]}selected="selected"{/if}>$v</option>
+                {/loop}
+                </select>
+<!--{/if}-->
+<!--1级分类 -->
+           <!--{if $local}-->
+ 			<select class="ps" name="local_1" onchange="ajaxget('plugin.php?id=mini_download:attclass&action=getlocal&lid='+this.value, 'local_2')" />
+				<option value="1">{lang mini_download:xuanzefenlei}</option>
+				<!--{loop $local $lid $localname}-->
+				<option value="{$lid}" {if $lid == $localupid} selected {/if} >{$localname['subject']}</option>
+				<!--{/loop}-->
+				
+			</select>
+			<!--{/if}-->
+			<span id="local_2" name="local_2">{$localshow}</span>
+
+              </label></td>
+        </tr>
+
+        <tr>
+              <td>{$_G['cache']['plugin']['mini_download']['biaotiname']}</td>
+              <td><input name="title" type="text" id="title" value="$active[title]" size="40" /></td>
+        </tr>
+
+        <tr>
+              <td>{lang mini_download:fengmian}</td>
+              <td><label>
+                <input type="file" name="file" id="pic" size="29" />
+              </label><span>{lang mini_download:daxiaoxianzhi}{echo round($picdx/1000)}K</span>
+        </td>
+        </tr>
+
+
+
+
+<!--{if !empty($sd[0])}-->
+        <tr>
+              <td>$sd[0]</td>
+              <td><label>
+<input type="text" name="sd1">
+              </label></td>
+        </tr>
+<!--{/if}-->
+
+
+<!--{if !empty($sd[1])}-->
+        <tr>
+              <td>$sd[1]</td>
+              <td><label>
+<input type="text" name="sd2">
+              </label></td>
+        </tr>
+<!--{/if}-->
+
+
+
+<!--{if !empty($sd[2])}-->
+        <tr>
+              <td>$sd[2]</td>
+              <td><label>
+<input type="text" name="sd3">
+              </label></td>
+        </tr>
+<!--{/if}-->
+
+
+
+<!--{if !empty($sd[3])}-->
+        <tr>
+              <td>$sd[3]</td>
+              <td><label>
+<input type="text" name="sd4">
+              </label></td>
+        </tr>
+<!--{/if}-->
+
+
+<!--{if !empty($sd[4])}-->
+        <tr>
+              <td>$sd[4]</td>
+              <td><label>
+<input type="text" name="sd5">
+              </label></td>
+        </tr>
+<!--{/if}-->
+
+
+<!--{if !empty($sd[5])}-->
+        <tr>
+              <td>$sd[5]</td>
+              <td><label>
+<input type="text" name="sd6">
+              </label></td>
+        </tr>
+<!--{/if}-->
+
+<!--{if !empty($sd[6])}-->
+        <tr>
+              <td>$sd[6]</td>
+              <td><label>
+<input type="text" name="sd7">
+              </label></td>
+        </tr>
+<!--{/if}-->
+<!--{if !empty($sd[7])}-->
+        <tr>
+              <td>$sd[7]</td>
+              <td><label>
+<input type="text" name="sd8">
+              </label></td>
+        </tr>
+<!--{/if}-->
+        <tr>
+              <td>{lang mini_download:homeurl}</td>
+              <td><label>
+<input type="text" name="homeurl" size="40">
+              </label>{lang mini_download:nohttp}</td>
+        </tr>
+  <!--{if $uploadset!= 2}-->
+  <input type="file" name="file2" id="upload" size="30" style="display:none;"/>
+<tr>
+<td>{lang mini_download:xiazaimingcheng}</td>
+<td><label>
+<textarea rows="3" cols="40" name="downtitle"></textarea></label>
+{lang mini_download:xiazaimingchengbeizhu}
+</td>
+</tr>
+
+<tr>
+<td>{lang mini_download:xiazaidizhi}</td>
+<td><label>
+<textarea rows="3" cols="80" name="downurl"></textarea></label>
+{lang mini_download:http}
+</td>
+</tr>
+<!--{/if}-->
+<!--{if $uploadset!= 1}-->
+        <tr>
+              <td>{lang mini_download:upload}</td>
+              <td><label>
+                {lang mini_download:mingcheng}<input type="text" name="uploadname" size="20" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="file" name="file2" id="upload" size="30" />
+              </label><span>{lang mini_download:daxiaoxianzhi}{echo round($uploaddx/1000)}K</span>
+        </td>
+        </tr>
+<!--{/if}-->
+
+
+
+        <tr>
+              <td>{lang mini_download:tuijianxingji}</td>
+              <td><label>
+                <select name="star">
+				<option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+                </select>
+              </label></td>
+        </tr>
+
+        <tr>
+              <td>{lang mini_download:xiaobianjianping}</td>
+              <td><label>
+<input type="text" name="jianping" size="100">
+              </label></td>
+        </tr>
+
+
+        <tr>
+              <td >{lang mini_download:info}</td>
+              <td>
+              
+               <div class="tedt">
+              <div class="bar">
+					<!--{eval $seditor = array('propaganda', array('bold', 'color', 'link', 'img'));}-->
+					<!--{subtemplate common/seditor}-->
+              </div>
+              <div class=area>
+                <textarea id="propagandamessage" class="pt" rows="20" cols="40" name="info"></textarea>
+              </div>
+            </div>
+            
+              </td>
+        </tr>
+       
+        <!--{if $softpayset=="1"||$_G['adminid']=="1"}-->
+        <tr>
+              <td>{lang mini_download:price}({$mini_download['extcredits'][$config[softpaytype]]['title']})</td>
+              <td><label>
+<input type="text" name="price" size="5">
+              </label></td>
+        </tr>
+
+<!--{/if}-->
+
+
+<!--{if $_G['groupid']=="1"}-->
+	
+	
+	        <tr>
+              <td></td>
+              <td style="color:red;">
+              {lang mini_download:addguanlitishi}
+              </td>
+        </tr>
+       
+
+	
+
+
+        <tr>
+              <td>{lang mini_download:shifoutuijian}</td>
+              <td><label>
+<input name="tuijian" type="radio" value="0" checked="checked"/>{lang mini_download:no}
+<input name="tuijian" type="radio" value="1"/>{lang mini_download:yes}
+              </label></td>
+        </tr>
+<!--{/if}-->
+
+
+
+       
+        </table>
+        </div>
+        
+        
+        <div style="text-align:center; margin:10px auto 0;">
+            <button type="submit" name="applysubmit" id="applysubmit" value="true" class="pn pnp" /><strong>{lang mini_download:queding}</strong></button>
+        </div>
+        
+        </form>
+    </ul>

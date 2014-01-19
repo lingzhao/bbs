@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[cnzztongji.plugin]]></item>
+	<item id="RevisionID"><![CDATA[28681]]></item>
+	<item id="SN"><![CDATA[2013122914Ryt5r50555]]></item>
+	<item id="RevisionDateline"><![CDATA[1389146401]]></item>
+	<item id="Data">
+		<item id="/cnzztongji.class.php"><![CDATA[cebe1df34663402b4aa14a4bcf1db548]]></item>
+		<item id="/common/cnzztongji.common.config.service.php"><![CDATA[6bc3803b4611af6dbaa9b30a82cda93f]]></item>
+		<item id="/common/cnzztongji.common.general.service.php"><![CDATA[003d5915401adca92abc0f8fdba4ac6c]]></item>
+		<item id="/common/cnzztongji.common.proxy.service.php"><![CDATA[0674c9eaf2e6c3ec281396564325b5cd]]></item>
+		<item id="/common/index.htm"><![CDATA[7215ee9c7d9dc229d2921a40e899ec5f]]></item>
+		<item id="/config/common.const.php"><![CDATA[6ed7510d0214b28b7ec2d82ad0216920]]></item>
+		<item id="/config/common.language.php"><![CDATA[f7f3fcf1cdf44df5c676bff40e832f85]]></item>
+		<item id="/config/index.htm"><![CDATA[7215ee9c7d9dc229d2921a40e899ec5f]]></item>
+		<item id="/config/template.statcode.php"><![CDATA[a3a6255d7b37ecc43f8a7139a2b1bc35]]></item>
+		<item id="/discuz_plugin_cnzztongji_SC_GBK.xml"><![CDATA[b6297b5dcad148ae78d05040b55f61d0]]></item>
+		<item id="/discuz_plugin_cnzztongji_SC_UTF8.xml"><![CDATA[e2ab34ec69ce14997495e8829b5364af]]></item>
+		<item id="/discuz_plugin_cnzztongji_TC_BIG5.xml"><![CDATA[5c7a8429adef2840aa66272b34b5faf2]]></item>
+		<item id="/discuz_plugin_cnzztongji_TC_UTF8.xml"><![CDATA[d4b53279a002f3619334f575c8b12425]]></item>
+		<item id="/help.inc.php"><![CDATA[07dca635915d6ffd946822bb481ba81b]]></item>
+		<item id="/index.htm"><![CDATA[7215ee9c7d9dc229d2921a40e899ec5f]]></item>
+		<item id="/install.php"><![CDATA[20abdfb52a33c2738631434d9aa5afcc]]></item>
+		<item id="/setting.inc.php"><![CDATA[f1df881ada254a41945843c768f37210]]></item>
+		<item id="/table/index.htm"><![CDATA[7215ee9c7d9dc229d2921a40e899ec5f]]></item>
+		<item id="/table/json.class.php"><![CDATA[cdee01e2c39309885ee9d3d7121d6e02]]></item>
+		<item id="/table/table_common_plugin_cnzztongji.php"><![CDATA[280e012da72aa2a08fb4e9518234ab2d]]></item>
+		<item id="/uninstall.php"><![CDATA[fbe206413166c50005e29218739e6f6a]]></item>
+		<item id="/common/dz_plugin_cnzztongji_wap.php"><![CDATA[70facdc12007f538788883213635fde0]]></item>
+		<item id="/setting_wap.inc.php"><![CDATA[1d8ec21d1cd463f79dca7b517212b595]]></item>
+		<item id="/upgrade.php"><![CDATA[92857d84cac4cf93024119145f83d850]]></item>
+	</item>
+</root>

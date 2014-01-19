@@ -1,0 +1,32 @@
+{template common/header}
+<link rel="stylesheet" type="text/css" href="source/plugin/mini_download/css/mini_download.css" />
+<SCRIPT LANGUAGE="JavaScript">   
+function closeErrors() {    
+return true;    
+}    
+window.onerror=closeErrors;    
+</SCRIPT>
+<!--{if !$_G[gp_mod]}-->
+<script type="text/javascript">
+    if(typeof(JQUERY)=="undefined") 
+    {
+       document.write('<script src="source/plugin/mini_download/js/jquery-1.7.2.min.js\" type="text\/javascript"><\/script>');
+    }
+    </script>
+<script src="source/plugin/mini_download/js/default-banner.js"></script>
+<script type="text/javascript">
+JQUERY = jQuery.noConflict(); 
+</script>
+<!--{template mini_download:list}-->
+<!--{elseif $_G[gp_mod] == 'view'}-->
+<!--{template mini_download:view}-->
+<!--{elseif $_G[gp_mod] == 'freedown'}-->
+<!--{template mini_download:freedown}-->
+<!--{elseif $_G[gp_mod] == 'download'}-->
+<!--{template mini_download:download}-->
+<!--{elseif $_G[gp_mod] == 'pay'}-->
+<!--{template mini_download:pay}-->
+<!--{elseif $_G[gp_mod] == 'paylistview'}-->
+<!--{template mini_download:paylistview}-->
+<!--{/if}-->
+{template common/footer}

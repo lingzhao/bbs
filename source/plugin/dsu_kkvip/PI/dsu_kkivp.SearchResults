@@ -1,0 +1,12 @@
+---- // Matches (13 in 10 files) ----
+discuz_plugin_dsu_kkvip_SC_GBK.xml:	<item id="From"><![CDATA[KK's Laboratory (http://127.0.0.1/x2/)]]></item>
+discuz_plugin_dsu_kkvip_SC_UTF8.xml:	<item id="From"><![CDATA[KK's Laboratory (http://127.0.0.1/x2/)]]></item>
+discuz_plugin_dsu_kkvip_TC_BIG5.xml:	<item id="From"><![CDATA[KK's Laboratory (http://127.0.0.1/x2/)]]></item>
+discuz_plugin_dsu_kkvip_TC_UTF8.xml:	<item id="From"><![CDATA[KK's Laboratory (http://127.0.0.1/x2/)]]></item>
+Install.php:		$dsuStatUrl='http://www.dsu.cc/stat.php';
+Mylevel.htm (template):    		<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="673" height="60" align="middle">
+Mylevel.htm (template):				<embed src="source/plugin/dsu_kkvip/images/level.swf" width="673" height="60" align="middle" quality="high" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" flashvars="grow_value=$_G[vip][czz]">
+Uninstall.php:		$dsuStatUrl='http://www.dsu.cc/stat.php';
+Vip.class.php:		// VIP Icons
+Vip_data.api.php (extend):$ext_name = '&#12304;DSU&#12305;VIP&#25968;&#25454;&#22791;&#20221;/&#36824;&#21407; By lingsky.com';		// extend's name, please convert it at he.kookxiang.com
+Vip_sidebar.htm (template):	<p> <a href="http://www.dsu.cc/" target="_blank"><span style="font: bold 13px Arial; color: #fbb040;">[DSU]</span><span style="font: bold 16px Verdana; color: #f15a29;">VIP Center</span></a><span style="font: normal 9px Verdana; display:block;">Ver <a href="http://www.dsu.cc/" style="font: bold 9px Verdana;">1.12</a> <a href="http://www.kookxiang.com">Kookxiang</a>.</span></p>

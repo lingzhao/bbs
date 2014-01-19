@@ -1,0 +1,57 @@
+{template mini_download:banner_admin_header}
+<script src="static/js/calendar.js" type="text/javascript"></script>
+<script language="javascript">
+function changetype(type){
+ document.getElementById(type).style.display='';
+ if(type=="text"){
+    document.getElementById('file').style.display='none';
+	document.getElementById('url').style.fontWeight='bold'; 
+	document.getElementById('up').style.fontWeight='lighter';
+ }
+ if(type=='file'){
+	document.getElementById('text').style.display='none';
+	document.getElementById('up').style.fontWeight='bold';
+	document.getElementById('url').style.fontWeight='lighter';
+ }
+}
+</script>
+<form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table cellpadding="10" border="1">
+
+    <tr>
+      <td>{lang mini_download:mingcheng}</td>
+      <td><label>
+        <input name="atitle" type="text" id="atitle" size="40" />
+      </label></td>
+    </tr>
+
+    <tr>
+      <td>{lang mini_download:bannerurl}</td>
+      <td><label>
+           <input name="aurl" type="text" id="aurl" size="80" />
+          </label></td>
+    </tr>
+    <tr>
+      <td>{lang mini_download:bannerjietu}<br>(960X280)</td>
+      <td><label>
+        <input type="file" id="file" size="30" name="file" style="display:none;" /> 
+<input type="text" id="text"  size="60" name="aimg"/> 
+<a href="javascript:" id="up" onclick="changetype('file'); return false;">{lang mini_download:bannerscjietu}</a> | <a href="javascript:" id="url" onclick="changetype('text'); return false;" style="font-weight:bold;">{lang mini_download:bannerwljietu}
+      </label>
+      </td>
+    </tr>
+
+    <tr>
+      <td>{lang mini_download:info}</td>
+      <td><label>
+        <textarea name="ainfo" cols="80" rows="3" id="ainfo"></textarea>
+      </label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td align="center"><label>
+        <input type="submit" name="Submit" value="{lang mini_download:ok}" />
+      </label></td>
+    </tr>
+  </table>
+</form>

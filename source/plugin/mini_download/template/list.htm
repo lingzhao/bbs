@@ -1,0 +1,252 @@
+
+<!--顶部 -->
+<div id="pt" class="bm cl">
+    <div class="z">
+        <a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em>
+        <a href="forum.php">$_G[setting][bbname]</a><em>&raquo;</em>
+		<a href="<!--{if $html == 1}-->down.html<!--{else}-->plugin.php?id=mini_download:index<!--{/if}-->">{$_G['cache']['plugin']['mini_download']['t_title']}</a><em>&raquo;</em>{lang mini_download:list}
+    </div>
+	<!--{if $_G['groupid']=="1"}-->
+    <div class="y">
+<a href="<!--{if $html == 1}-->down_user.html<!--{else}-->plugin.php?id=mini_download:mini_download_user<!--{/if}-->">{lang mini_download:guanlimianban}</a>
+    </div>
+	<!--{/if}-->
+</div>
+<!--顶部 -->
+<!--公告-->
+<div style="width:960px; margin:0 auto;height:auto; overflow:hidden;">
+<marquee scrollamount=4><FONT color=red>{$_G['cache']['plugin']['mini_download']['gonggao']}</FONT></marquee>
+</div>
+<!--公告-->
+
+
+<!--菜单--> 
+<style>
+/*菜单*/
+.minidownload{width:960px;position:relative;margin:0 auto;}
+.minidownloadtop{border: 1px {$_G['cache']['plugin']['mini_download']['color']} solid;-moz-border-radius:3px;-webkit-border-radius:3px;-ms-border-radius:3px;border-radius:3px;margin-bottom:5px;}
+.m10{margin:10px;}
+#ssclass{list-style:none;margin:0px;padding:1px;}
+#ssclass li{margin:5px;line-height:22px;border-bottom:1px {$_G['cache']['plugin']['mini_download']['color']} dashed;}
+#ssclass LABEL{color:#999;}
+#ssclass p{display:inline;margin:0;padding:0;}
+#ssclass p a{padding:2px 5px 2px 5px;text-decoration: none;}
+#ssclass p a:hover{color:#fff;background-color:#666;}
+.mini_download_hover{color:{$_G['cache']['plugin']['mini_download']['textcolor']};background-color:{$_G['cache']['plugin']['mini_download']['color']};}
+.mini_download_hover2{height: 33px; border-bottom:2px #fff solid;display: inline; line-height: 33px;}
+</style>
+<div class="minidownload">
+<div class="minidownloadtop">
+<div class="m10">
+<UL id="ssclass">
+<!--1级分类 -->
+<!--{if $class1set== 1}-->
+ <LI>
+ <LABEL>{lang mini_download:yijifenlei}</LABEL>
+ <p>
+   <a href="<!--{if $html == 1}-->down.html<!--{else}-->$appurl<!--{/if}-->">{lang mini_download:quanbu}</a>
+    {loop $listclass $k $v}
+     <a href="<!--{if $html == 1}-->down_{$k}_{$did}_{$nsd}.html<!--{else}-->$appurl&c=$k&d=$did&nsd=$nsd<!--{/if}-->"{$av_ds[$k]}>$v</a>
+    {/loop} 
+</p>
+ </LI>
+<!--{/if}-->
+<!--1级分类 -->
+
+
+<!--二级分类 -->
+<LI>
+ <LABEL><!--{if $class1set== 1}-->{lang mini_download:erjifenlei}<!--{else}-->{lang mini_download:yijifenlei}<!--{/if}--></LABEL>
+ <p>
+        {loop $local $id $arrs}
+         <a href="<!--{if $html == 1}-->down_{$cid}_{$arrs['id']}.html<!--{else}-->$appurl&c=$cid&d={$arrs['id']}<!--{/if}-->"{$av_d[$arrs[id]]}><span>{$arrs['subject']}</span></a>
+        {/loop}                                                                     
+ </p>
+ </LI>
+<!--二级分类 -->
+<!--{if $subid}-->
+<LI>
+<!--{if $class1set!= 1}--> <LABEL>{lang mini_down:erjifenlei}</LABEL><!--{/if}-->
+ <p>
+<!--{loop $locals $d $locala}-->
+    <a href="<!--{if $html == 1}-->down_{$cid}_{$locala['upid']}_{$locala['id']}.html<!--{else}-->$appurl&c=$cid&d={$locala['upid']}&nsd={$locala['id']}<!--{/if}-->"{$av_d[$locala[id]]}>{$locala['subject']}</a>
+<!--{/loop}-->
+ </p>
+ </LI>
+<!--{/if}-->
+
+<!--{if $diyclassset== 1}-->
+{$_G['cache']['plugin']['mini_download']['diyclass']}
+<!--{/if}-->
+</UL> 
+</div>
+</div>
+
+<!--幻灯片--> 
+<!--{if $bannerset== 1}-->
+<style type="text/css">
+#focus {width:960px; height:280px; overflow:hidden; position:relative;margin-bottom:5px;}
+#focus ul {height:960px; position:absolute;}
+#focus ul li {float:left; width:960px; height:280px; overflow:hidden; position:relative; background:#fff;}
+#focus ul li div {position:absolute; overflow:hidden;}
+#focus .btnBg {position:absolute; width:960px; height:20px; left:0; bottom:0; background:#000;}
+#focus .btn {position:absolute; width:960px; height:10px; padding:5px 10px; right:0; bottom:0; text-align:right;}
+#focus .btn span {display:inline-block; _display:inline; _zoom:1; width:25px; height:10px; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
+#focus .btn span.on {background:#fff;}
+#focus .preNext {width:45px; height:100px; position:absolute; top:90px; background:url(source/plugin/mini_download/images/sprite.png) no-repeat 0 0; cursor:pointer;}
+#focus .pre {left:0;}
+#focus .next {right:0; background-position:right top;}
+</style>
+<div class="wrapper">
+	<div id="focus">
+		<ul><!--{if $banners}--> 
+		{loop $banners $key $banner}
+			<li>
+			<!--{if !empty($banner[url])}--><a href="{$banner[url]}" target="_blank"><img src="<!--{if !empty($banner[img])}-->{$banner[img]}<!--{else}-->source/plugin/mini_download/banner/$banner[id].jpg<!--{/if}-->" alt="{$banner[title]}" /></a>
+			<!--{else}-->
+<img src="<!--{if !empty($banner[img])}-->{$banner[img]}<!--{else}-->source/plugin/mini_download/banner/$banner[id].jpg<!--{/if}-->" alt="{$banner[title]}" />
+			<!--{/if}-->
+			  <div style="color: white;position: absolute;left: 0;bottom: 0;width:100%;background: black;opacity: .65;filter: alpha(opacity=65);z-index: 0;text-align: left;padding-bottom: 20px;">
+            	<h3>{$banner[title]}</h3>
+             	<p>{$banner[info]}</p>
+              </div>
+			</li>
+        {/loop}
+		<!--{/if}-->
+		</ul>
+	</div>
+</div>
+<!--{/if}-->
+<!--幻灯片--> 
+<div id="contenter">
+<!--左--> 
+    <div class="wpleft">
+
+        <div class="leftitle" style=" border-left:1px {$_G['cache']['plugin']['mini_download']['color']} solid;background:{$_G['cache']['plugin']['mini_download']['color']};">
+            <ul>
+                <li><h2><a href="<!--{if $html == 1}-->down_moren.html<!--{else}-->plugin.php?id=mini_download:index&c=$cid&d=$did&nsd=$nsd&types=time<!--{/if}-->" "{$a_hover[time]}><font color={$_G['cache']['plugin']['mini_download']['textcolor']}>{lang mini_download:moren}</font></a></h2></li>
+                <li ><h2><a href="<!--{if $html == 1}-->down_tj.html<!--{else}-->plugin.php?id=mini_download:index&c=$cid&d=$did&nsd=$nsd&types=tj<!--{/if}-->"{$a_hover[tj]}><font color={$_G['cache']['plugin']['mini_download']['textcolor']}>{lang mini_download:tuijian}</font></a></h2></li>
+
+            </ul>
+        </div>
+        <div class="listsoga" style="border: 1px {$_G['cache']['plugin']['mini_download']['color']} solid;">
+<ul>
+
+    <!--{if $mythreads}-->               
+       {loop $mythreads $key $mythread}
+            <li>
+                <div class="tup">
+                    <a href="<!--{if $html == 1}-->down_$curl{$mythread[id]}.html<!--{else}-->plugin.php?id=mini_download:index&mod=view&sid=$curl{$mythread[id]}<!--{/if}-->"
+                    title="{$mythread[title]}" target="_blank">
+                        <img src="<!--{if !empty($mythread[pic])}-->{$mythread[pic]}<!--{else}-->source/plugin/mini_download/images/nopic.jpg<!--{/if}-->" alt="{$mythread[title]}" /></a>
+                </div>
+                <div class="h2">
+                    <a class="name"  href="<!--{if $html == 1}-->down_$curl{$mythread[id]}.html<!--{else}-->plugin.php?id=mini_download:index&mod=view&sid=$curl{$mythread[id]}<!--{/if}-->"
+                    title="{$mythread[title]}" target="_blank">{$mythread[title]}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="yw"><!--{if !empty($mythread[price])}--><img src="source/plugin/mini_download/images/pay.gif" title="{lang mini_download:fufeiziyuan}"><!--{else}--><!--{/if}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--{if round($mythread[total]/$mythread[voter],1) != 0}-->{lang mini_download:wangyoupingfen}:{echo round
+($mythread[total]/$mythread[voter],1)}{lang mini_download:fen}<!--{else}--><!--{/if}--></span></a></div>
+                <p class="gd">
+                    $sd[0]{lang mini_download:maohao}{$mythread['sd1']}&nbsp;&nbsp;&nbsp;
+					$sd[1]{lang mini_download:maohao}{$mythread['sd2']}&nbsp;&nbsp;&nbsp;
+					{lang mini_download:chakancishu}{lang mini_download:maohao}{$mythread['view']}&nbsp;&nbsp;&nbsp;
+					{lang mini_download:fabutime}{lang mini_download:maohao}{$mythread[dateline]}
+					<span class="starbasic star{$mythread[star]}"> </span>
+                </p>
+                <p class="jd">{$mythread[info]}</p>
+            </li>
+       {/loop}
+<!--{else}-->
+{lang mini_download:zanwuxinxi}
+<!--{/if}--> 
+</ul>
+{$multis}
+        </div>
+
+    </div>
+<!--左--> 
+
+<!--右-->
+
+     <div class="wpright">
+<!--发布-->
+<!--{if in_array($_G['groupid'], $fabuset)}-->
+<style>
+.fabu{display: inline-block;border:1px solid #dddfe1;-moz-border-radius:5px;-webkit-border-radius:5px;-ms-border-radius:5px;border-radius:5px;height: 45px;width:273px;background-color:{$_G['cache']['plugin']['mini_download']['color']};line-height: 45px;margin-bottom:10px;text-align:center;font-size:25px;font-weight:bold;overflow: hidden;}
+.fabu a{color:#fff;text-decoration: none;}
+
+</style>
+<div class="fabu">
+<a href="<!--{if $html ==1}-->down_user.html<!--{else}-->plugin.php?id=mini_download:mini_download_user<!--{/if}-->" target="_blank">{$_G['cache']['plugin']['mini_download']['fabusetname']}</a>
+</div>
+<!--{/if}-->
+<!--发布-->
+
+
+<!--人气排行-->
+            <div class="rigtop" style="border: 1px {$_G['cache']['plugin']['mini_download']['color']} solid;">
+                <h2 style="background:{$_G['cache']['plugin']['mini_download']['color']};"><font color={$_G['cache']['plugin']['mini_download']['textcolor']}>{lang mini_download:renqipaihang}</font></h2>
+<ul>
+<!--{if $renqis}-->        
+    {loop $renqis $key $renqi}
+            <li>
+                <div class="rtoptu">
+                    <a href="<!--{if $html == 1}-->down_$curl{$renqi[id]}.html<!--{else}-->plugin.php?id=mini_down:index&mod=view&sid=$curl{$renqi[id]}<!--{/if}-->"
+                        title="{$renqi[title]}" target="_blank"><img src="<!--{if !empty($renqi[pic])}-->{$renqi[pic]}<!--{else}-->source/plugin/mini_download/images/nopic.jpg<!--{/if}-->"alt="{$renqi[title]}" title="{$renqi[title]}" /></a>
+                </div>
+                <a target="_blank" class="name" title="{$renqi[title]}" href="<!--{if $html == 1}-->down_$curl{$renqi[id]}.html<!--{else}-->plugin.php?id=mini_download:index&mod=view&sid=$curl{$renqi[id]}<!--{/if}-->">{$renqi[title]}</a>
+                <p>
+                    <span class="gz1">{lang mini_download:chakancishu}{lang mini_download:maohao}</span><span class="gz2">{$renqi[view]}</span><span class="starbasic star{$renqi[star]}"> </span></p>
+            </li>
+     {/loop}
+<!--{/if}-->   
+<!--{if $renqi2s}-->        
+    {loop $renqi2s $key $renqi2}
+    <li>
+    <a class="nawe" href="<!--{if $html == 1}-->down_$curl{$renqi2[id]}.html<!--{else}-->plugin.php?id=mini_download:index&mod=view&sid=$curl{$renqi2[id]}<!--{/if}-->" title="{$renqi2[title]}" target="_blank">{$renqi2[title]}</a>
+    <span class="starbasic star{$renqi2[star]}"></span>
+	</li>
+     {/loop}
+<!--{/if}-->   
+</ul>
+            </div>
+<!--人气排行-->
+            <div style="margin:5px 0;">
+                {$_G['cache']['plugin']['mini_download']['ad']}
+            </div>
+<!--下载排行-->
+            <div class="rigtop" style="border: 1px {$_G['cache']['plugin']['mini_download']['color']} solid;">
+                <h2 style="background:{$_G['cache']['plugin']['mini_download']['color']};"><font color={$_G['cache']['plugin']['mini_download']['textcolor']}>{lang mini_download:xiazaipaihang}</font></h2>
+<ul>
+<!--{if $xiazais}-->        
+    {loop $xiazais $key $xiazai}
+            <li>
+                <div class="rtoptu">
+                    <a href="<!--{if $html == 1}-->down_$curl{$xiazai[id]}.html<!--{else}-->plugin.php?id=mini_download:index&mod=view&sid=$curl{$xiazai[id]}<!--{/if}-->"
+                        title="{$xiazai[title]}" target="_blank"><img src="<!--{if !empty($xiazai[pic])}-->{$xiazai[pic]}<!--{else}-->source/plugin/mini_download/images/nopic.jpg<!--{/if}-->" alt="{$xiazai[title]}" /></a>
+                </div>
+                <a target="_blank" class="name" title="{$xiazai[title]}" href="<!--{if $html == 1}-->down_$curl{$xiazai[id]}.html<!--{else}-->plugin.php?id=mini_download:index&mod=view&sid=$curl{$xiazai[id]}<!--{/if}-->">{$xiazai[title]}</a>
+
+
+              <p>
+                    <span class="gz1">{lang mini_download:xiazai}{lang mini_download:maohao}</span><span class="gz2">{$xiazai[down]}</span><span class="starbasic star{$xiazai[star]}"> </span></p>
+
+
+            </li>
+     {/loop}
+<!--{/if}-->   
+<!--{if $xiazai2s}-->        
+    {loop $xiazai2s $key $xiazai2}
+    <li>
+    <a class="nawe" href="<!--{if $html == 1}-->down_$curl{$xiazai2[id]}.html<!--{else}-->plugin.php?id=mini_download:index&mod=view&sid=$curl{$xiazai2[id]}<!--{/if}-->" title="{$xiazai2[title]}" target="_blank">{$xiazai2[title]}</a>
+    <span class="starbasic star{$xiazai2[star]}"></span>
+	</li>        
+     {/loop}
+<!--{/if}-->   
+</ul>
+            </div>
+<!--下载排行-->
+     </div>
+<!--右-->
+</div>
+
+
+ <div style="width:960px; height:auto; overflow:hidden;">{$_G['cache']['plugin']['mini_download']['footad']}</div>

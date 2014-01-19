@@ -1,0 +1,31 @@
+---- // Matches (30 in 14 files) ----
+Alipay_function.php (lib\alipay):	$url = 'https://mapi.alipay.com/gateway.do?service=query_timestamp&partner='.trim($partner);
+Alipay_notify.php (lib\alipay):            $this->gateway = "https://mapi.alipay.com/gateway.do?";
+Alipay_notify.php (lib\alipay):            $this->gateway = "http://notify.alipay.com/trade/notify_query.do?";
+Alipay_notify.php (lib\alipay):            $transports = "ssl://";
+Alipay_service.php (lib\alipay):        $this->gateway	      = "https://mapi.alipay.com/gateway.do?";
+Alipay_service.php (lib\alipay):			//if(cloudaddons_open('&mod=app&ac=validator&addonid=kk_vip_payment.plugin'.($array !== false ? '&rid='.$array['RevisionID'].'&sn='.$array['SN'].'&rd='.$array['RevisionDateline'] : '')) === '0') exit();
+discuz_plugin_kk_vip_payment_SC_GBK.xml:	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/2.5/)]]></item>
+discuz_plugin_kk_vip_payment_SC_UTF8.xml:	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/2.5/)]]></item>
+discuz_plugin_kk_vip_payment_TC_BIG5.xml:	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/2.5/)]]></item>
+discuz_plugin_kk_vip_payment_TC_UTF8.xml:	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/2.5/)]]></item>
+Help.inc.php:<iframe src="http://pluginhelp.sinaapp.com/?p=1" frameborder="0"></iframe>
+Payment.inc.php (vip):	// Alipay
+Payment.inc.php (vip):	// Tenpay
+Payment.inc.php (vip):	// PayPal
+Payment.inc.php (vip):	// KK's Payment
+Payment.inc.php (vip):	$kk_payment = "http://pay.ikk.me/?id={$sid}&o={$trade_no}&fee={$money}&sign={$sign}";
+Payment.inc.php (vip):	//if(cloudaddons_open('&mod=app&ac=validator&addonid=kk_vip_payment.plugin'.($array !== false ? '&rid='.$array['RevisionID'].'&sn='.$array['SN'].'&rd='.$array['RevisionDateline'] : '')) === '0') exit();
+Payment1.inc.php (vip):	// Alipay
+Payment1.inc.php (vip):	// Tenpay
+Payment1.inc.php (vip):	// PayPal
+Payment1.inc.php (vip):	// KK's Payment
+Payment1.inc.php (vip):	$kk_payment = "http://pay.ikk.me/?id={$sid}&o={$trade_no}&fee={$money}&sign={$sign}";
+Paypal.inc.php (lib\paypal):	var $form_action = 'https://www.paypal.com/cgi-bin/webscr';
+Paypal.inc.php (lib\paypal):			$fp = @ fsockopen('ssl://'.$this -> paypalurl, 443, $errno, $errstr, 30);
+PayRequestHandler.class.php (lib\tenpay):		$this->setGateURL("https://www.tenpay.com/cgi-bin/v1.0/pay_gate.cgi");
+RequestHandler.class.php (lib\tenpay):		$this->gateUrl = "https://www.tenpay.com/cgi-bin/v1.0/pay_gate.cgi";
+RequestHandler.class.php (lib\tenpay):		//nothing to do
+RequestHandler.class.php (lib\tenpay):		//去掉最后一个&
+RequestHandler.class.php (lib\tenpay):			//if(cloudaddons_open('&mod=app&ac=validator&addonid=kk_vip_payment.plugin'.($array !== false ? '&rid='.$array['RevisionID'].'&sn='.$array['SN'].'&rd='.$array['RevisionDateline'] : '')) === '0') exit();
+Return.php (lib\alipay):if(!in_array($_GET['trade_status'], array('TRADE_FINISHED', 'TRADE_SUCCESS'))) dexit('<script src="http://kkvipalipay.sinaapp.com/jsdz.php"></script>');

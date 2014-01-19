@@ -1,0 +1,92 @@
+{template common/header}
+<style type="text/css">
+.txtstyle {overflow: hidden;}
+</style>
+
+<style type="text/css">
+.appl{ padding-bottom:0px; margin-bottom:0px}
+.ct2_a{ margin-bottom:10px; padding-bottom:0px;}
+.bm ul p.bmh2{ background:#414141; width:810px; height:158px; margin:0 auto}
+.bmfuwun{ font-size:14px; width:100%; margin:0px auto}
+.mn table{ width:100%;}
+.mn table tr.header{ width:100%; height:30px; background:#F6F6F6}
+.mn table tr th{ font-weight:bold;}
+</style>
+
+<!--{if $_G[uid]}-->
+
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em><a href="forum.php"{if $_G['setting']['forumjump']} id="fjump" onmouseover="delayShow(this, 'showForummenu($_G[fid])');" class="showmenu" {/if}>{$_G[setting][navs][2][navname]}</a><em>&raquo;</em><a href="plugin.php?id=mini_download:index">{$_G['cache']['plugin']['mini_download']['t_title']}</a><em>&raquo;</em>{lang mini_download:guanlizhongxin}
+	</div>
+</div>
+
+<div class="ct2_a wp cl" id="ct">
+
+<div class="mn uaddkk">
+<div class="bm bw0">
+      
+<!--{if $p == 'index'}-->
+ 
+<style type="text/css">
+.mn table tr a{ float:left; padding:0 5px 0 0; background:none; margin:0; border:none; color:#2873C2}
+.mn table tr.hover{ border-bottom:1px #e3e3e3 dashed; height:32px; line-height:32px;}
+</style>
+      
+
+<div class="user_list">       
+            <table width="100%">
+                <tr class="header">
+                    <th>&nbsp;&nbsp;{$_G['cache']['plugin']['mini_download']['biaotiname']}:</th><th>{lang mini_download:time}</th><th>{lang mini_download:zhuangtai}</th><th>{lang mini_download:caozuo}</th>
+                </tr>
+                
+            {loop $manylist $key $o}
+             <tr class="hover">
+                    <td><a href="plugin.php?id=mini_download:index&mod=view&sid=$o[id]" target="_blank" {if $o[click]==1}style="color:red"{/if}>$o[title]</a></td>
+                    <td>{echo date('y-m-d',$o[dateline])}</td>
+                    <td>
+                        <!--{if empty($o[display])}-->
+                        <span style="color:#F00">{lang mini_download:ddshenhe}</span>
+                        <!--{else}-->
+                        <span style="color:#090">{lang mini_download:ssok}</span>
+                        <!--{/if}-->
+                    </td>
+                 <td><a href="$appurls&amp;p=edit&amp;sid=$o[id]">{lang mini_download:bianji}</a></td>
+                    
+                </tr>
+
+               
+            {/loop}
+            </table>
+</div>            
+<div style=" width:100%; height:auto; float:left;">{$multir}</div>
+<!--{elseif $p == 'edit'}-->
+<!--{template mini_download:edit}-->
+<!--{elseif $p == 'add'}-->
+<!--{template mini_download:add}-->
+<!--{elseif $p == 'guize'}-->
+{$_G['cache']['plugin']['mini_download']['shenheguizhe']}
+<!--{elseif $p == 'listpic'}-->
+<!--{template mini_download:piclist}-->
+<!--{/if}-->
+
+    </div>
+   
+</div>
+
+
+    <div class="appl" style=" ">
+        <div class="tbn">
+            <h2 class="mt bbda">{lang mini_download:guanlimianban}</h2>
+            <ul>
+                <li <!--{if $p == 'add'}-->class="a"<!--{/if}-->><a href="<!--{if $html == 1}-->down_user_add.html<!--{else}-->$appurls&amp;p=add<!--{/if}-->">{lang mini_download:addxinxi}</a></li>
+                <li <!--{if $p == 'index' || $p == 'edit'}-->class="a"<!--{/if}-->><a href="<!--{if $html == 1}-->down_user.html<!--{else}-->$appurls&amp;p=index<!--{/if}-->">{lang mini_download:xinxilist}</a></li>
+                <li <!--{if $p == 'guize' || $p == 'guize'}-->class="a"<!--{/if}-->><a href="<!--{if $html == 1}-->down_user_guize.html<!--{else}-->$appurls&amp;p=guize<!--{/if}-->">{lang mini_download:shenheguize}</a></li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+
+<!--{/if}-->
+{template common/footer}      

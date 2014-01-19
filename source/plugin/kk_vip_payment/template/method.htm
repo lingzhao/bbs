@@ -1,0 +1,41 @@
+{template dsu_kkvip:header}
+<style type="text/css">
+.method li{ line-height: 38px; background: #f5f5f5; border: 1px #dedede solid; cursor: pointer; margin: 10px 50px; }
+.method li:hover{ background: #e5e5e5; }
+.method a:hover{ text-decoration: none; }
+</style>
+<div class="pay">
+<form>
+<h3>&#35746;&#21333;&#20449;&#24687;</h3>
+<ul>
+<li><span>&#35746;&#21333;&#24635;&#20215;: </span>$money &#20803;</li>
+<li><span>&#35746;&#21333;&#32534;&#21495;: </span>$trade_no</li>
+</ul>
+</form>
+</div>
+{if in_array('paypal', $method)}
+{$paypal_form}
+{/if}
+<div class="pay method">
+<form>
+<h3>&#36873;&#25321;&#25903;&#20184;&#26041;&#24335;</h3>
+<ul>
+{if in_array('alipay', $method)}
+<li onclick="location.href='{$alipay_url}'">
+<span><img src="source/plugin/kk_vip_payment/images/alipay.jpg"></span><a href="javascript:;" style="padding-left: 20px">&#28857;&#20987;&#20351;&#29992;&#25903;&#20184;&#23453;&#25903;&#20184;&#65292;&#25903;&#25345;&#32593;&#38134;&#25903;&#20184;</a></li>
+{if $payment['alipay']['sjk']}<p class="notice" style="margin-left: 220px; color:red">&#22312;&#24744;&#20351;&#29992;&#25903;&#20184;&#23453;&#20184;&#27454;&#26102;&#35831;&#36873;&#25321;&ldquo;&#21363;&#26102;&#21040;&#24080;&#20132;&#26131;&rdquo;&#65292;&#21542;&#21017;&#21487;&#33021;&#26080;&#27861;&#33258;&#21160;&#24320;&#36890;VIP&#26435;&#38480;&#12290;</p>{/if}
+{/if}
+{if in_array('kk_pay', $method)}
+<li onclick="location.href='{$kk_payment}'">
+<span><img src="source/plugin/kk_vip_payment/images/alipay.jpg"></span><a href="javascript:;" style="padding-left: 20px">&#28857;&#20987;&#20351;&#29992;&#25903;&#20184;&#23453;&#25903;&#20184;&#65292;&#30001; KK's Payment &#25552;&#20379;&#25216;&#26415;&#25903;&#25345;</a></li>
+{/if}
+{if in_array('tenpay', $method)}
+<li onclick="location.href='{$tenpay_url}'"><span><img src="source/plugin/kk_vip_payment/images/tenpay.jpg"></span><a href="javascript:;" style="padding-left: 20px">&#28857;&#20987;&#20351;&#29992;&#36130;&#20184;&#36890;&#25903;&#20184;&#65292;&#25903;&#25345;&#32593;&#38134;&#25903;&#20184;</a></li>
+{/if}
+{if in_array('paypal', $method)}
+<li onclick="document.paypal.submit();"><span><img src="source/plugin/kk_vip_payment/images/paypal.jpg"></span><a href="javascript:;" style="padding-left: 20px">&#28857;&#20987;&#20351;&#29992;PayPal&#25903;&#20184;&#65292;&#25903;&#25345;&#32593;&#38134;&#25903;&#20184;</a></li>
+{/if}
+</ul>
+</form>
+</div></div></div>
+{template common/footer}

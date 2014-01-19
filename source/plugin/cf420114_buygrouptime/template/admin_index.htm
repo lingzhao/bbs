@@ -1,0 +1,40 @@
+{template cf420114_buygrouptime:admin_header}
+
+
+<form id="form1" name="form1" method="post" action="">
+<label>用户名称：
+<input name="suser" type="text" id="suser" />
+</label>
+<label>订单号：
+<input name="order" type="text" id="order" />
+</label>
+<label>
+<input type="submit" name="Submit" value="提交" />
+</label>
+</form>
+<p>&nbsp;</p>
+<table width="100%" border="1" cellpadding="5">
+  <tr>
+    <td>顺序</td>
+    <td>时间</td>
+    <td>用户</td>
+    <td>订单号</td>
+    <td>金额</td>
+    <td>购买用户组</td>
+    <td>有效期</td>
+  </tr>
+  {loop $manylist $key $o}
+  <tr>
+    <td>{echo $key+1+$begin}</td>
+    <td>{echo date('Y-m-d H:i',$o[dateline])}</td>
+    <td>$o[user]</td>
+    <td>$o[order]</td>
+    <td>$o[price]</td>
+    <td>$o[groupname]</td>
+    <td>{if $o[date]}$o[date]{else}永久{/if}</td>
+  </tr>
+  {/loop}
+</table>
+<p>&nbsp;</p>
+<p>$pagenav</p>
+<p>&nbsp;</p>

@@ -1,0 +1,13 @@
+<?php
+
+$cert = array(
+'2013122921EESx477Pe2',
+'19383',
+'1372946401',
+'85FD9528-F850-8DDE-F28D-06A929E15987',
+'http://www.lingsky.com/',
+'http://www.lingsky.com/bbs/',
+);
+$sign = 'cc83eb2e7078a73933cfb9db92c40ba1';
+
+?>

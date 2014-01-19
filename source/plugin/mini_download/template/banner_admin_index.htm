@@ -1,0 +1,20 @@
+{template mini_download:banner_admin_header}
+
+<table  cellpadding="5" border="1">
+  <tr>
+    <td>{lang mini_download:paixu}</td>
+    <td>{lang mini_download:mingcheng}</td>
+    <td>{lang mini_download:caozuo}</td>
+  </tr>
+  {loop $manylist $key $o}
+  <tr valign="top">
+    <td>{echo $key+1}</td>
+    <td>$o[title]</td>
+    <td><a href="$appurl&amp;p=edit&amp;id=$o[id]">{lang mini_download:bianji}</a> <a href="$appurl&amp;p=del&amp;id=$o[id]" onclick="return confirm('{lang mini_download:shanchutishi}')">{lang mini_download:shanchu}</a></td>
+  </tr>
+  {/loop}
+</table>
+
+<p>&nbsp;</p>
+
+<p>$pagenav</p>

@@ -1,0 +1,47 @@
+<!--{loop $mythreads $mythread}-->
+<script type="text/javascript"> 
+<!-- 
+document.oncontextmenu=function(e){return false;} 
+// --></script> 
+<style><!-- 
+body { 
+-moz-user-select:none; 
+} 
+--></style> 
+	<h3 class="flb"><em>{lang mini_download:xiazaiyulan}</em>
+	<span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span>
+    </h3>
+<div style="width:760px; height:auto; overflow:hidden;">{$_G['cache']['plugin']['mini_download']['downad']}</div>
+           <div class="down">
+			<!--{if !empty($mythread['upload'])}-->
+                <div class="title" style="border-bottom:2px {$_G['cache']['plugin']['mini_download']['color']} solid;">
+                    <h2 style="background: {$_G['cache']['plugin']['mini_download']['color']};"><font color={$_G['cache']['plugin']['mini_download']['textcolor']}>{lang mini_download:bendidown}</font></h2>
+                </div>    
+        <dl>
+                    <dd>
+<a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');"><!--{if !empty($mythread['uploadname'])}-->{$mythread['uploadname']}<!--{else}-->{lang mini_download:bendidown}<!--{/if}--></a> 
+				
+                    </dd>
+		</dl>
+<!--{/if}-->
+<!--{if !empty($mythread['downurl'])}-->
+                <div class="title" style="border-bottom:2px {$_G['cache']['plugin']['mini_download']['color']} solid;">
+                    <h2 style="background: {$_G['cache']['plugin']['mini_download']['color']};"><font color={$_G['cache']['plugin']['mini_download']['textcolor']}>{lang mini_download:downlist}</font></h2>
+                </div>  
+        
+
+
+         <dl>
+
+<!--{loop $url $key $val}-->
+		             <dd>
+<a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');"><!--{if !($deb[$key]=='')}-->$deb[$key]&nbsp;&nbsp;<!--{else}-->{lang mini_download:xiazai}&nbsp;{$key}&nbsp;&nbsp;<!--{/if}--></a> 
+
+                    </dd>
+
+<!--{/loop}-->	
+        </dl>
+<!--{/if}-->
+     </div> 
+
+<!--{/if}--> 
