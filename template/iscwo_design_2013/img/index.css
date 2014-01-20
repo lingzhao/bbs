@@ -336,8 +336,8 @@
 
 .vt_table{ padding:18px 0 10px 0; border-bottom: 1px dashed #CDCDCD;}
 .vt_pct{ width:682px; background:#000;}
-.t_fsz { min-height:20px; }
-* html .t_fsz { height:20px; overflow: visible; }
+.t_fsz { min-height:20px; width: 600px;}
+* html .t_fsz { height:20px; width: 600px; overflow: visible; }
 .pct { padding-bottom:4px;}
 
 .vt_postbottom{ width:602px;}

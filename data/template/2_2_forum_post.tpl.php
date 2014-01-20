@@ -1,17 +1,17 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('post');
 0
-|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/post_editor_extra.htm', 1390232670, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
-|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/post_editor_body.htm', 1390232670, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
-|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/post_editor_attribute.htm', 1390232670, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
-|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/iscwo_design_2013/common/seccheck.htm', 1390232670, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
-|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/iscwo_design_2013/common/editor_menu.htm', 1390232670, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
-|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/editor_menu_forum.htm', 1390232670, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
-|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/common/upload.htm', 1390232670, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
-|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/iscwo_design_2013/common/editor.htm', 1390232670, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
-|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1390232670, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
-|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1390232670, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
-|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1390232670, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
-|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1390232670, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
+|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/post_editor_extra.htm', 1390234359, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
+|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/post_editor_body.htm', 1390234359, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
+|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/post_editor_attribute.htm', 1390234359, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
+|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/iscwo_design_2013/common/seccheck.htm', 1390234359, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
+|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/iscwo_design_2013/common/editor_menu.htm', 1390234359, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
+|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/editor_menu_forum.htm', 1390234359, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
+|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/common/upload.htm', 1390234359, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
+|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/iscwo_design_2013/common/editor.htm', 1390234359, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
+|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1390234359, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
+|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1390234359, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
+|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1390234359, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
+|| checktplrefresh('./template/iscwo_design_2013/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1390234359, '2', './data/template/2_2_forum_post.tpl.php', './template/iscwo_design_2013', 'forum/post')
 ;?><?php include template('common/header'); ?><script type="text/javascript">
 var allowpostattach = parseInt('<?php echo $_G['group']['allowpostattach'];?>');
 var allowpostimg = parseInt('<?php echo $allowpostimg;?>');

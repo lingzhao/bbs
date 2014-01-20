@@ -1,8 +1,8 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); 
 0
-|| checktplrefresh('./template/iscwo_design_2013/common/header.htm', './template/iscwo_design_2013/common/header_common.htm', 1390234359, '2', './data/template/2_2_common_header_forum_post.tpl.php', './template/iscwo_design_2013', 'common/header_forum_post')
-|| checktplrefresh('./template/iscwo_design_2013/common/header.htm', './template/iscwo_design_2013/common/header_qmenu.htm', 1390234359, '2', './data/template/2_2_common_header_forum_post.tpl.php', './template/iscwo_design_2013', 'common/header_forum_post')
-|| checktplrefresh('./template/iscwo_design_2013/common/header.htm', './template/iscwo_design_2013/common/pubsearchform.htm', 1390234359, '2', './data/template/2_2_common_header_forum_post.tpl.php', './template/iscwo_design_2013', 'common/header_forum_post')
+|| checktplrefresh('./template/iscwo_design_2013/common/header_bbs.htm', './template/iscwo_design_2013/common/header_common.htm', 1390234505, '2', './data/template/2_2_common_header_bbs.tpl.php', './template/iscwo_design_2013', 'common/header_bbs')
+|| checktplrefresh('./template/iscwo_design_2013/common/header_bbs.htm', './template/iscwo_design_2013/common/header_qmenu.htm', 1390234505, '2', './data/template/2_2_common_header_bbs.tpl.php', './template/iscwo_design_2013', 'common/header_bbs')
+|| checktplrefresh('./template/iscwo_design_2013/common/header_bbs.htm', './template/iscwo_design_2013/common/pubsearchform.htm', 1390234505, '2', './data/template/2_2_common_header_bbs.tpl.php', './template/iscwo_design_2013', 'common/header_bbs')
 ;?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -19,7 +19,7 @@
 <meta name="copyright" content="2001-2013 Comsenz Inc." />
 <meta name="MSSmartTagsPreventParsing" content="True" />
 <meta http-equiv="MSThemeCompatible" content="Yes" />
-<base href="<?php echo $_G['siteurl'];?>" /><link rel="stylesheet" type="text/css" href="data/cache/style_<?php echo STYLEID;?>_common.css?<?php echo VERHASH;?>" /><link rel="stylesheet" type="text/css" href="data/cache/style_<?php echo STYLEID;?>_forum_post.css?<?php echo VERHASH;?>" /><?php if($_G['uid'] && isset($_G['cookie']['extstyle']) && strpos($_G['cookie']['extstyle'], TPLDIR) !== false) { ?><link rel="stylesheet" id="css_extstyle" type="text/css" href="<?php echo $_G['cookie']['extstyle'];?>/style.css" /><?php } elseif($_G['style']['defaultextstyle']) { ?><link rel="stylesheet" id="css_extstyle" type="text/css" href="<?php echo $_G['style']['defaultextstyle'];?>/style.css" /><?php } ?><script type="text/javascript">var STYLEID = '<?php echo STYLEID;?>', STATICURL = '<?php echo STATICURL;?>', IMGDIR = '<?php echo IMGDIR;?>', VERHASH = '<?php echo VERHASH;?>', charset = '<?php echo CHARSET;?>', discuz_uid = '<?php echo $_G['uid'];?>', cookiepre = '<?php echo $_G['config']['cookie']['cookiepre'];?>', cookiedomain = '<?php echo $_G['config']['cookie']['cookiedomain'];?>', cookiepath = '<?php echo $_G['config']['cookie']['cookiepath'];?>', showusercard = '<?php echo $_G['setting']['showusercard'];?>', attackevasive = '<?php echo $_G['config']['security']['attackevasive'];?>', disallowfloat = '<?php echo $_G['setting']['disallowfloat'];?>', creditnotice = '<?php if($_G['setting']['creditnotice']) { ?><?php echo $_G['setting']['creditnames'];?><?php } ?>', defaultstyle = '<?php echo $_G['style']['defaultextstyle'];?>', REPORTURL = '<?php echo $_G['currenturl_encode'];?>', SITEURL = '<?php echo $_G['siteurl'];?>', JSPATH = '<?php echo $_G['setting']['jspath'];?>', DYNAMICURL = '<?php echo $_G['dynamicurl'];?>';</script>
+<base href="<?php echo $_G['siteurl'];?>" /><link rel="stylesheet" type="text/css" href="data/cache/style_<?php echo STYLEID;?>_common.css?<?php echo VERHASH;?>" /><link rel="stylesheet" type="text/css" href="data/cache/style_<?php echo STYLEID;?>_forum_index.css?<?php echo VERHASH;?>" /><?php if($_G['uid'] && isset($_G['cookie']['extstyle']) && strpos($_G['cookie']['extstyle'], TPLDIR) !== false) { ?><link rel="stylesheet" id="css_extstyle" type="text/css" href="<?php echo $_G['cookie']['extstyle'];?>/style.css" /><?php } elseif($_G['style']['defaultextstyle']) { ?><link rel="stylesheet" id="css_extstyle" type="text/css" href="<?php echo $_G['style']['defaultextstyle'];?>/style.css" /><?php } ?><script type="text/javascript">var STYLEID = '<?php echo STYLEID;?>', STATICURL = '<?php echo STATICURL;?>', IMGDIR = '<?php echo IMGDIR;?>', VERHASH = '<?php echo VERHASH;?>', charset = '<?php echo CHARSET;?>', discuz_uid = '<?php echo $_G['uid'];?>', cookiepre = '<?php echo $_G['config']['cookie']['cookiepre'];?>', cookiedomain = '<?php echo $_G['config']['cookie']['cookiedomain'];?>', cookiepath = '<?php echo $_G['config']['cookie']['cookiepath'];?>', showusercard = '<?php echo $_G['setting']['showusercard'];?>', attackevasive = '<?php echo $_G['config']['security']['attackevasive'];?>', disallowfloat = '<?php echo $_G['setting']['disallowfloat'];?>', creditnotice = '<?php if($_G['setting']['creditnotice']) { ?><?php echo $_G['setting']['creditnames'];?><?php } ?>', defaultstyle = '<?php echo $_G['style']['defaultextstyle'];?>', REPORTURL = '<?php echo $_G['currenturl_encode'];?>', SITEURL = '<?php echo $_G['siteurl'];?>', JSPATH = '<?php echo $_G['setting']['jspath'];?>', DYNAMICURL = '<?php echo $_G['dynamicurl'];?>';</script>
 <script src="<?php echo $_G['setting']['jspath'];?>common.js?<?php echo VERHASH;?>" type="text/javascript"></script>
 <script src="<?php echo IMGDIR;?>/css/jquery-1.4.1.min.js" type="text/javascript" type="text/javascript"></script>
 <script language="javascript">var jq = jQuery.noConflict();</script>
@@ -30,7 +30,7 @@
 <script src="<?php echo IMGDIR;?>/css/DD_belatedPNG.js" type="text/javascript"></script>
 <script>DD_belatedPNG.fix('span,.sylist_tx,.sylist_txcover,.yyicon2,.report');</script>
 <![endif]-->
-<script type="text/javascript">window.onerror=function(){return true;}</script><?php require_once("template/iscwo_design_2013/forum/vime.php");?><meta name="application-name" content="<?php echo $_G['setting']['bbname'];?>" />
+<script type="text/javascript">window.onerror=function(){return true;}</script><?php require_once("template/iscwo_design_2013/forum/forum_index.php");?><?php require_once("template/iscwo_design_2013/forum/vime.php");?><meta name="application-name" content="<?php echo $_G['setting']['bbname'];?>" />
 <meta name="msapplication-tooltip" content="<?php echo $_G['setting']['bbname'];?>" />
 <?php if($_G['setting']['portalstatus']) { ?><meta name="msapplication-task" content="name=<?php echo $_G['setting']['navs']['1']['navname'];?>;action-uri=<?php echo !empty($_G['setting']['domain']['app']['portal']) ? 'http://'.$_G['setting']['domain']['app']['portal'] : $_G['siteurl'].'portal.php'; ?>;icon-uri=<?php echo $_G['siteurl'];?><?php echo IMGDIR;?>/portal.ico" /><?php } ?>
 <meta name="msapplication-task" content="name=<?php echo $_G['setting']['navs']['2']['navname'];?>;action-uri=<?php echo !empty($_G['setting']['domain']['app']['forum']) ? 'http://'.$_G['setting']['domain']['app']['forum'] : $_G['siteurl'].'forum.php'; ?>;icon-uri=<?php echo $_G['siteurl'];?><?php echo IMGDIR;?>/bbs.ico" />
@@ -321,7 +321,4 @@ initSearchmenu('scbar', '<?php echo $searchparams['url'];?>');
 <?php } ?>
 <script type="text/javascript">headDownList();</script>
 <div>
-</div>
-
-
-<div id="wp" class="wp">
+<div>

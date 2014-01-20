@@ -27,12 +27,12 @@
 </tr>
 <tr>
 <td>º€∏Ò(<?php echo $_G['setting']['extcredits'][$_G['setting']['creditstransextra']['1']]['title'];?>)</td>
-<td><?php echo $attach['price'];?> <?php echo $_G['setting']['extcredits'][$_G['setting']['creditstransextra']['1']]['unit'];?></td>
+<td align=center><b><font color=red><?php echo $attach['price'];?> <?php echo $_G['setting']['extcredits'][$_G['setting']['creditstransextra']['1']]['unit'];?></font></b></td>
 </tr>
 <?php if($status != 1) { ?>
 <tr>
 <td>”‡∂Ó(<?php echo $_G['setting']['extcredits'][$_G['setting']['creditstransextra']['1']]['title'];?>)</td>
-<td><?php echo $balance;?> <?php echo $_G['setting']['extcredits'][$_G['setting']['creditstransextra']['1']]['unit'];?></td>
+<td align=center><?php echo $balance;?> <?php echo $_G['setting']['extcredits'][$_G['setting']['creditstransextra']['1']]['unit'];?></td>
 </tr>
 <?php } if($status == 1) { ?>
 <tr>
