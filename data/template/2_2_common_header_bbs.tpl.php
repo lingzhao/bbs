@@ -1,8 +1,8 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); 
 0
-|| checktplrefresh('./template/iscwo_design_2013/common/header_bbs.htm', './template/iscwo_design_2013/common/header_common.htm', 1390132963, '2', './data/template/2_2_common_header_bbs.tpl.php', './template/iscwo_design_2013', 'common/header_bbs')
-|| checktplrefresh('./template/iscwo_design_2013/common/header_bbs.htm', './template/iscwo_design_2013/common/header_qmenu.htm', 1390132963, '2', './data/template/2_2_common_header_bbs.tpl.php', './template/iscwo_design_2013', 'common/header_bbs')
-|| checktplrefresh('./template/iscwo_design_2013/common/header_bbs.htm', './template/iscwo_design_2013/common/pubsearchform.htm', 1390132963, '2', './data/template/2_2_common_header_bbs.tpl.php', './template/iscwo_design_2013', 'common/header_bbs')
+|| checktplrefresh('./template/iscwo_design_2013/common/header_bbs.htm', './template/iscwo_design_2013/common/header_common.htm', 1390150110, '2', './data/template/2_2_common_header_bbs.tpl.php', './template/iscwo_design_2013', 'common/header_bbs')
+|| checktplrefresh('./template/iscwo_design_2013/common/header_bbs.htm', './template/iscwo_design_2013/common/header_qmenu.htm', 1390150110, '2', './data/template/2_2_common_header_bbs.tpl.php', './template/iscwo_design_2013', 'common/header_bbs')
+|| checktplrefresh('./template/iscwo_design_2013/common/header_bbs.htm', './template/iscwo_design_2013/common/pubsearchform.htm', 1390150110, '2', './data/template/2_2_common_header_bbs.tpl.php', './template/iscwo_design_2013', 'common/header_bbs')
 ;?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

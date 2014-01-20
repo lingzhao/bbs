@@ -489,8 +489,8 @@ $lang = array (
 
   'ranklist_status_off' => '排行榜功能关闭',
 
-  'report_parameters_invalid' => '页面参数错误，暂不能举报',
-  'report_succeed' => '举报成功 ',
+  'report_parameters_invalid' => '页面参数错误，暂不能反馈',
+  'report_succeed' => '反馈成功 ',
 
   'tag_closed' => '抱歉，管理员锁定了此标签',
 

@@ -1,17 +1,2 @@
----- ignore_js_op Matches (16 in 4 files) ----
-Common_extra.js (static\js):	msg = msg.replace(/(<ignore_js_op\>[\s|\S]*?<\/ignore_js_op\>)/ig, function($1) {
-Common_extra.js (static\js):		return '#ignore_js_op '+(i - 1)+'#';
-Common_extra.js (static\js):		msg = msg.replace('#ignore_js_op '+l+'#', ignore[l]);
-Discuzcode.htm (template\default\forum):<ignore_js_op>
-Discuzcode.htm (template\default\forum):</ignore_js_op>
-Discuzcode.htm (template\default\forum):	<ignore_js_op>
-Discuzcode.htm (template\default\forum):	</ignore_js_op>
-Discuzcode.htm (template\default\forum):<ignore_js_op>
-Discuzcode.htm (template\default\forum):</ignore_js_op>
-Discuzcode.php (template\iscwo_design_2013\forum):<ignore_js_op>
-Discuzcode.php (template\iscwo_design_2013\forum):</ignore_js_op>
-Discuzcode.php (template\iscwo_design_2013\forum):	<ignore_js_op>
-Discuzcode.php (template\iscwo_design_2013\forum):	</ignore_js_op>
-Discuzcode.php (template\iscwo_design_2013\forum):<ignore_js_op>
-Discuzcode.php (template\iscwo_design_2013\forum):</ignore_js_op>
-Forum_viewthread.php (source\module\forum):		$post['message'] = cutstr(strip_tags(preg_replace('/(<ignore_js_op>.*<\/ignore_js_op>)/is', '', $post['message'])), 200);
+---- 举报成功 Matches (1 in 1 files) ----
+Lang_message.php (source\language):  'report_succeed' => '举报成功 ',

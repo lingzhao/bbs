@@ -433,6 +433,41 @@ margin-bottom: 20px;
 
 .copyright_index {height: 200px;width: 950px;background-image: url("images/version.gif");background-repeat: no-repeat;background-position: right 80px;background-color: #F0F0F0;margin-right: auto;margin-left: auto;}
 
+.SDOViewDownload {
+    background-color: #5B9965;
+    margin: 15px auto 5px;
+    padding: 8px;
+    text-align: center;
+}
+.SDOViewDownload a {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+}
+.SDOViewDownlist {
+    background-color: #FFFFEC;
+    border: 1px solid #E3E3E3;
+    color: #546B10;
+    padding: 10px;
+}
+.SDOViewDownlist h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.SDOViewDownlist a {
+    background-color: #5B9965;
+    color: #FFFFFF;
+    padding: 5px;
+}
+.SDOViewDownlist a:hover {
+    background: none repeat scroll 0 0 #87B888;
+}
+.SDOViewDownlist td {
+    background-color: #FFFFFF;
+    border-bottom: 1px dashed #CCCCCC;
+    font-size: 12px;
+    padding: 10px;
+}
 
 /*ie6警告*/
 #update-broswer{height:70px;background-image: url(images/ie6_bg.gif);background-repeat: repeat-x;background-color: #828282;background-position: bottom;}

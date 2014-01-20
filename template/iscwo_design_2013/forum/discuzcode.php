@@ -284,6 +284,36 @@ function attachinpost($attach, $post) {
 		<!--{if $musiccode}-->
 			<div>$musiccode</div>
 		<!--{/if}-->
+		
+		<div id="downloadfile" class="SDOViewDownlist">
+		<h3>软件下载地址</h3>
+		<table>
+		<tbody><tr>
+		<td width="20%">软件文件名:</td>
+		<td>$post[subject]</td>
+		</tr>
+
+		<tr>
+		<td><span style="color:#f00;font-size:14px;font-weight:bold;">点击下载：</span></td>
+		<td>
+		<a target="_blank" onclick="showWindow('reattpay', 'showtip.php?mod=reattpay&amp;aid=2663')" href="viewthreadurl.php?id=2663">$post[subject] </a>&nbsp;&nbsp;</td>
+		</tr>
+
+		<tr>
+		<td>VIP服务:</td>
+		<td width="80%"><img width="13" height="10" src="static/image/help/vip.png" style="-webkit-user-select: none"> <a target="_blank" href="vip.php">升级VIP，无需金币，超级权限，无限软件高速下载。</a></td>
+		</tr>
+
+		<tr>
+		<td>下载反馈:</td>
+		<td width="80%"><span style="cursor:pointer" onclick="showWindow('miscreport', 'misc.php?mod=report&amp;url='+REPORTURL);return false;" href="javascript:;">如该下载有任何问题，请报告给我们，我们第一时间将其修复</span> <a style="background-color:#ffffff;color:#5B9965;text-decoration: underline;" target="_blank" href="help.php">[下载常见问题]</a></td>
+		</tr>
+		</tbody></table>
+		</div>
+
+
+
+ 
 		$attach[attachicon]
 		<span style="white-space: nowrap" id="attach_$attach[aid]" {if $_GET['from'] != 'preview'}onmouseover="showMenu({'ctrlid':this.id,'pos':'12'})"{/if}>
 			<!--{if !$attach['price'] || $attach['payed']}-->
