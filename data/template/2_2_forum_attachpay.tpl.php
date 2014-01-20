@@ -23,7 +23,7 @@
 <table class="list" cellspacing="0" cellpadding="0" style="width: 400px">
 <tr>
 <td>Èí¼þ</td>
-<td><div style="overflow:hidden"><?php echo $_G['forum_thread']['subject'];?></div></td>
+<td><div style="overflow:hidden"><?php echo $truncatedsubject;?></div></td>
 </tr>
 <tr>
 <td>¼Û¸ñ(<?php echo $_G['setting']['extcredits'][$_G['setting']['creditstransextra']['1']]['title'];?>)</td>

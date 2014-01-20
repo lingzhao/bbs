@@ -105,6 +105,7 @@ if($_GET['action'] == 'paysucceed') {
 	$attach['netprice'] = $status != 2 ? round($attach['price'] * (1 - $_G['setting']['creditstax'])) : 0;
 	$lockid = 'attachpay_'.$_G['uid'];
 	if(!submitcheck('paysubmit')) {
+	       $truncatedsubject = cutpoststr($_G[forum_thread][subject],45);
 		include template('forum/attachpay');
 	} elseif(!discuz_process::islocked($lockid)) {
 		if(!empty($_GET['buyall'])) {
