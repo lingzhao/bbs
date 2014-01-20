@@ -82,39 +82,38 @@ function attachlist($attach) {
 <!--{/eval}-->
 <!--{block return}-->
 <ignore_js_op>
-	<dl class="tattl">
-		<dt>
-			$attach[attachicon]
-		</dt>
-		<dd>
-			<p class="attnm">
+		<div id="downloadfile" class="SDOViewDownlist">
+		<h3>软件下载地址</h3>
+		<table>
+		<tbody><tr>
+		<td width="20%">软件文件名:</td>
+		<td>$_G[forum_thread][subject]</td>
+		</tr>
+
+		<tr>
+		<td><span style="color:#f00;font-size:14px;font-weight:bold;">点击下载：</span></td>
+		<td>
+			<span style="white-space: nowrap" id="attach_$attach[aid]" {if $_GET['from'] != 'preview'}onmouseover="showMenu({'ctrlid':this.id,'pos':'12'})"{/if}>
 				<!--{if !$attach['price'] || $attach['payed']}-->
-					<a href="forum.php?mod=attachment{$is_archive}&aid=$aidencode" {if $_GET['from'] != 'preview'}onmouseover="showMenu({'ctrlid':this.id,'pos':'12'})"{/if} id="aid$attach[aid]" target="_blank">$attach[filename]</a>
+					<a href="forum.php?mod=attachment{$is_archive}&aid=$aidencode" target="_blank">$_G[forum_thread][subject]</a>
 				<!--{else}-->
-					<a href="forum.php?mod=misc&action=attachpay&aid=$attach[aid]&tid=$attach[tid]" onclick="showWindow('attachpay', this.href)">$attach[filename]</a>
+					<a href="forum.php?mod=misc&action=attachpay&aid=$attach[aid]&tid=$attach[tid]" onclick="showWindow('attachpay', this.href)">$_G[forum_thread][subject]</a>
 				<!--{/if}-->
-				<div class="tip tip_4" id="aid$attach[aid]_menu" style="display: none" disautofocus="true">
-					<div class="tip_c">
-						<p class="y">$attach[dateline] {lang upload}</p>
-						<p>{lang clicktodownload}</p>
-						<!--{if !$attach['attachimg'] && $_G['getattachcredits']}-->{lang attachcredits}: $_G[getattachcredits]<br /><!--{/if}-->
-					</div>
-					<div class="tip_horn"></div>
-				</div>
-			</p>
-			<p>$attach[attachsize]<!--{if $attach['readperm']}-->, {lang readperm}: <strong>$attach[readperm]</strong><!--{/if}-->, {lang downloads}: $attach[downloads]<!--{if !$attach['attachimg'] && $_G['getattachcredits']}-->, {lang attachcredits}: $_G[getattachcredits]<!--{/if}--></p>
-			<p>
-				<!--{if $attach['price']}-->
-					{lang price}: <strong>$attach[price] {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]}</strong> &nbsp;[<a href="forum.php?mod=misc&action=viewattachpayments&aid=$attach[aid]" onclick="showWindow('attachpay', this.href)" target="_blank">{lang pay_view}</a>]
-					<!--{if !$attach['payed']}-->
-						&nbsp;[<a href="forum.php?mod=misc&action=attachpay&aid=$attach[aid]&tid=$attach[tid]" onclick="showWindow('attachpay', this.href)">{lang attachment_buy}</a>]
-					<!--{/if}-->
-				<!--{/if}-->
-			</p>
-			<!--{if $attach['description']}--><p class="xg2">{$attach[description]}</p><!--{/if}-->
-			$pluginhook
-		</dd>
-	</dl>
+			</span>
+		</tr>
+
+		<tr>
+		<td>VIP服务:</td>
+		<td width="80%"><img width="13" height="10" src="static/image/help/vip.png" style="-webkit-user-select: none"> <a target="_blank" href="vip.php">升级VIP，无需金币，超级权限，无限软件高速下载。</a></td>
+		</tr>
+
+		<tr>
+		<td>下载反馈:</td>
+		<td width="80%"><span style="cursor:pointer" onclick="showWindow('miscreport', 'misc.php?mod=report&amp;url='+REPORTURL);return false;" href="javascript:;">如该下载有任何问题，请报告给我们，我们第一时间将其修复</span> <a style="background-color:#ffffff;color:#5B9965;text-decoration: underline;" target="_blank" href="help.php">[下载常见问题]</a></td>
+		</tr>
+		</tbody></table>
+		</div>
+		<br />
 </ignore_js_op>
 <!--{/block}-->
 <!--{eval}-->
@@ -296,7 +295,13 @@ function attachinpost($attach, $post) {
 		<tr>
 		<td><span style="color:#f00;font-size:14px;font-weight:bold;">点击下载：</span></td>
 		<td>
-		<a target="_blank" onclick="showWindow('reattpay', 'showtip.php?mod=reattpay&amp;aid=2663')" href="viewthreadurl.php?id=2663">$post[subject] </a>&nbsp;&nbsp;</td>
+			<span style="white-space: nowrap" id="attach_$attach[aid]" {if $_GET['from'] != 'preview'}onmouseover="showMenu({'ctrlid':this.id,'pos':'12'})"{/if}>
+				<!--{if !$attach['price'] || $attach['payed']}-->
+					<a href="forum.php?mod=attachment{$is_archive}&aid=$aidencode" target="_blank">$post[subject]</a>
+				<!--{else}-->
+					<a href="forum.php?mod=misc&action=attachpay&aid=$attach[aid]&tid=$attach[tid]" onclick="showWindow('attachpay', this.href)">$post[subject]</a>
+				<!--{/if}-->
+			</span>
 		</tr>
 
 		<tr>
@@ -313,34 +318,8 @@ function attachinpost($attach, $post) {
 
 
 
- 
-		$attach[attachicon]
-		<span style="white-space: nowrap" id="attach_$attach[aid]" {if $_GET['from'] != 'preview'}onmouseover="showMenu({'ctrlid':this.id,'pos':'12'})"{/if}>
-			<!--{if !$attach['price'] || $attach['payed']}-->
-				<a href="forum.php?mod=attachment{$is_archive}&aid=$aidencode" target="_blank">$attach[filename]</a>
-			<!--{else}-->
-				<a href="forum.php?mod=misc&action=attachpay&aid=$attach[aid]&tid=$attach[tid]" onclick="showWindow('attachpay', this.href)">$attach[filename]</a>
-			<!--{/if}-->
-			<em class="xg1">($attach[attachsize], {lang downloads}: $attach[downloads]<!--{if $attach['price']}-->, {lang price}: $attach[price] {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]}<!--{/if}-->)</em>
-		</span>
-		<div class="tip tip_4" id="attach_$attach[aid]_menu" style="position: absolute; display: none" disautofocus="true">
-			<div class="tip_c xs0">
-				<div class="y">$attach[dateline] {lang upload}</div>
-				{lang clicktodownload}
-				<!--{if $attach['description']}--><br />$attach[description]<!--{/if}-->
-				<!--{if $attach['readperm']}--><br />{lang readperm}: $attach[readperm]<!--{/if}-->
-	<!--{/if}-->
-	<!--{if !IS_ROBOT && !$guestviewthumb}-->
-		<!--{if $attach['price']}-->
-			<br />{lang price}: $attach[price] {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]}	&nbsp;<a href="forum.php?mod=misc&action=viewattachpayments&aid=$attach[aid]" onclick="showWindow('attachpay', this.href)" target="_blank">[{lang pay_view}]</a>
-			<!--{if !$attach['payed']}-->
-				&nbsp;[<a href="forum.php?mod=misc&action=attachpay&aid=$attach[aid]&tid=$attach[tid]" onclick="showWindow('attachpay', this.href)" target="_blank">{lang attachment_buy}</a>]
-			<!--{/if}-->
-		<!--{/if}-->
-		<!--{if !$attach['attachimg'] && $_G['getattachcredits']}--><br />{lang attachcredits}: $_G[getattachcredits]<!--{/if}-->
-				</div>
-				<div class="tip_horn"></div>
-			</div>
+
+
 		<!--{if $musiccode}-->
 			<br />
 		<!--{/if}-->

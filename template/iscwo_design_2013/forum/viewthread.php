@@ -243,7 +243,7 @@
 				</div>
 				<![endif]-->
 
-				<h2>HotTags</h2>
+				<h2>»»√≈±Í«©</h2>
 				<p class="cl">
 		 <!--{loop $postlist $post}-->
          <!--{if $post['first']}-->

@@ -80,3 +80,9 @@
 <?PHP exit;?>	1390146491	admin	1	::1	2	默认版块	1	最新中文版 AE/PR/PS/AI/ID/DW/LR/FL/CS6CC官方原版中文Mac/PC版	EDT			
 <?PHP exit;?>	1390149099	admin	1	::1	2	默认版块	1	最新中文版 AE/PR/PS/AI/ID/DW/LR/FL/CS6CC官方原版中文Mac/PC版	EDT			
 <?PHP exit;?>	1390149451	admin	1	::1	2	默认版块	1	最新中文版 AE/PR/PS/AI/ID/DW/LR/FL/CS6CC官方原版中文Mac/PC版	EDT			
+<?PHP exit;?>	1390226846	admin	1	::1	2	默认版块	1	最新中文版 AE/PR/PS/AI/ID/DW/LR/FL/CS6CC官方原版中文Mac/PC版	DLP			
+<?PHP exit;?>	1390228353	admin	1	::1	2	默认版块	1	最新中文版 AE/PR/PS/AI/ID/DW/LR/FL/CS6CC官方原版中文Mac/PC版	EDT			
+<?PHP exit;?>	1390229957	admin	1	::1	2	默认版块	1	最新中文版 AE/PR/PS/AI/ID/DW/LR/FL/CS6CC官方原版中文Mac/PC版	EDT			
+<?PHP exit;?>	1390232557	admin	1	::1	2	默认版块	1	最新中文版 AE/PR/PS/AI/ID/DW/LR/FL/CS6CC官方原版中文Mac/PC版	EDT			
+<?PHP exit;?>	1390232692	admin	1	::1	2	默认版块	1	最新中文版 AE/PR/PS/AI/ID/DW/LR/FL/CS6CC官方原版中文Mac/PC版	EDT			
+<?PHP exit;?>	1390232715	admin	1	::1	2	默认版块	1	最新中文版 AE/PR/PS/AI/ID/DW/LR/FL/CS6CC官方原版中文Mac/PC版	EDT			

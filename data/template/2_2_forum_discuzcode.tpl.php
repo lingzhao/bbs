@@ -104,18 +104,18 @@ $pluginhook = !empty($_G['setting']['pluginhooks']['viewthread_attach_extra'][$a
 $return = <<<EOF
 
 <ignore_js_op>
-<dl class="tattl">
-<dt>
-{$attach['attachicon']}
-</dt>
-<dd>
-<p class="attnm">
+<div id="downloadfile" class="SDOViewDownlist">
+<h3>软件下载地址</h3>
+<table>
+<tbody><tr>
+<td width="20%">软件文件名:</td>
+<td>{$_G['forum_thread']['subject']}</td>
+</tr>
 
-EOF;
- if(!$attach['price'] || $attach['payed']) { 
-$return .= <<<EOF
-
-<a href="forum.php?mod=attachment{$is_archive}&amp;aid={$aidencode}" 
+<tr>
+<td><span style="color:#f00;font-size:14px;font-weight:bold;">点击下载：</span></td>
+<td>
+<span style="white-space: nowrap" id="attach_{$attach['aid']}" 
 EOF;
  if($_GET['from'] != 'preview') { 
 $return .= <<<EOF
@@ -123,83 +123,39 @@ onmouseover="showMenu({'ctrlid':this.id,'pos':'12'})"
 EOF;
  } 
 $return .= <<<EOF
- id="aid{$attach['aid']}" target="_blank">{$attach['filename']}</a>
+>
+
+EOF;
+ if(!$attach['price'] || $attach['payed']) { 
+$return .= <<<EOF
+
+<a href="forum.php?mod=attachment{$is_archive}&amp;aid={$aidencode}" target="_blank">{$_G['forum_thread']['subject']}</a>
 
 EOF;
  } else { 
 $return .= <<<EOF
 
-<a href="forum.php?mod=misc&amp;action=attachpay&amp;aid={$attach['aid']}&amp;tid={$attach['tid']}" onclick="showWindow('attachpay', this.href)">{$attach['filename']}</a>
+<a href="forum.php?mod=misc&amp;action=attachpay&amp;aid={$attach['aid']}&amp;tid={$attach['tid']}" onclick="showWindow('attachpay', this.href)">{$_G['forum_thread']['subject']}</a>
 
 EOF;
  } 
 $return .= <<<EOF
 
-<div class="tip tip_4" id="aid{$attach['aid']}_menu" style="display: none" disautofocus="true">
-<div class="tip_c">
-<p class="y">{$attach['dateline']} 上传</p>
-<p>点击文件名下载附件</p>
+</span>
+</tr>
 
-EOF;
- if(!$attach['attachimg'] && $_G['getattachcredits']) { 
-$return .= <<<EOF
-下载积分: {$_G['getattachcredits']}<br />
-EOF;
- } 
-$return .= <<<EOF
+<tr>
+<td>VIP服务:</td>
+<td width="80%"><img width="13" height="10" src="static/image/help/vip.png" style="-webkit-user-select: none"> <a target="_blank" href="vip.php">升级VIP，无需金币，超级权限，无限软件高速下载。</a></td>
+</tr>
 
+<tr>
+<td>下载反馈:</td>
+<td width="80%"><span style="cursor:pointer" onclick="showWindow('miscreport', 'misc.php?mod=report&amp;url='+REPORTURL);return false;" href="javascript:;">如该下载有任何问题，请报告给我们，我们第一时间将其修复</span> <a style="background-color:#ffffff;color:#5B9965;text-decoration: underline;" target="_blank" href="help.php">[下载常见问题]</a></td>
+</tr>
+</tbody></table>
 </div>
-<div class="tip_horn"></div>
-</div>
-</p>
-<p>{$attach['attachsize']}
-EOF;
- if($attach['readperm']) { 
-$return .= <<<EOF
-, 阅读权限: <strong>{$attach['readperm']}</strong>
-EOF;
- } 
-$return .= <<<EOF
-, 下载次数: {$attach['downloads']}
-EOF;
- if(!$attach['attachimg'] && $_G['getattachcredits']) { 
-$return .= <<<EOF
-, 下载积分: {$_G['getattachcredits']}
-EOF;
- } 
-$return .= <<<EOF
-</p>
-<p>
-
-EOF;
- if($attach['price']) { 
-$return .= <<<EOF
-
-售价: <strong>{$attach['price']} {$_G['setting']['extcredits'][$_G['setting']['creditstransextra']['1']]['unit']}{$_G['setting']['extcredits'][$_G['setting']['creditstransextra']['1']]['title']}</strong> &nbsp;[<a href="forum.php?mod=misc&amp;action=viewattachpayments&amp;aid={$attach['aid']}" onclick="showWindow('attachpay', this.href)" target="_blank">记录</a>]
-
-EOF;
- if(!$attach['payed']) { 
-$return .= <<<EOF
-
-&nbsp;[<a href="forum.php?mod=misc&amp;action=attachpay&amp;aid={$attach['aid']}&amp;tid={$attach['tid']}" onclick="showWindow('attachpay', this.href)">购买</a>]
-
-EOF;
- } } 
-$return .= <<<EOF
-
-</p>
-
-EOF;
- if($attach['description']) { 
-$return .= <<<EOF
-<p class="xg2">{$attach['description']}</p>
-EOF;
- } 
-$return .= <<<EOF
-
-{$pluginhook}
-</dd>
-</dl>
+<br />
 </ignore_js_op>
 
 EOF;
@@ -678,7 +634,33 @@ $return .= <<<EOF
 <tr>
 <td><span style="color:#f00;font-size:14px;font-weight:bold;">点击下载：</span></td>
 <td>
-<a target="_blank" onclick="showWindow('reattpay', 'showtip.php?mod=reattpay&amp;aid=2663')" href="viewthreadurl.php?id=2663">{$post['subject']} </a>&nbsp;&nbsp;</td>
+<span style="white-space: nowrap" id="attach_{$attach['aid']}" 
+EOF;
+ if($_GET['from'] != 'preview') { 
+$return .= <<<EOF
+onmouseover="showMenu({'ctrlid':this.id,'pos':'12'})"
+EOF;
+ } 
+$return .= <<<EOF
+>
+
+EOF;
+ if(!$attach['price'] || $attach['payed']) { 
+$return .= <<<EOF
+
+<a href="forum.php?mod=attachment{$is_archive}&amp;aid={$aidencode}" target="_blank">{$post['subject']}</a>
+
+EOF;
+ } else { 
+$return .= <<<EOF
+
+<a href="forum.php?mod=misc&amp;action=attachpay&amp;aid={$attach['aid']}&amp;tid={$attach['tid']}" onclick="showWindow('attachpay', this.href)">{$post['subject']}</a>
+
+EOF;
+ } 
+$return .= <<<EOF
+
+</span>
 </tr>
 
 <tr>
@@ -695,80 +677,8 @@ $return .= <<<EOF
 
 
 
- 
-{$attach['attachicon']}
-<span style="white-space: nowrap" id="attach_{$attach['aid']}" 
-EOF;
- if($_GET['from'] != 'preview') { 
-$return .= <<<EOF
-onmouseover="showMenu({'ctrlid':this.id,'pos':'12'})"
-EOF;
- } 
-$return .= <<<EOF
->
 
-EOF;
- if(!$attach['price'] || $attach['payed']) { 
-$return .= <<<EOF
 
-<a href="forum.php?mod=attachment{$is_archive}&amp;aid={$aidencode}" target="_blank">{$attach['filename']}</a>
-
-EOF;
- } else { 
-$return .= <<<EOF
-
-<a href="forum.php?mod=misc&amp;action=attachpay&amp;aid={$attach['aid']}&amp;tid={$attach['tid']}" onclick="showWindow('attachpay', this.href)">{$attach['filename']}</a>
-
-EOF;
- } 
-$return .= <<<EOF
-
-<em class="xg1">({$attach['attachsize']}, 下载次数: {$attach['downloads']}
-EOF;
- if($attach['price']) { 
-$return .= <<<EOF
-, 售价: {$attach['price']} {$_G['setting']['extcredits'][$_G['setting']['creditstransextra']['1']]['unit']}{$_G['setting']['extcredits'][$_G['setting']['creditstransextra']['1']]['title']}
-EOF;
- } 
-$return .= <<<EOF
-)</em>
-</span>
-<div class="tip tip_4" id="attach_{$attach['aid']}_menu" style="position: absolute; display: none" disautofocus="true">
-<div class="tip_c xs0">
-<div class="y">{$attach['dateline']} 上传</div>
-点击文件名下载附件
-
-EOF;
- if($attach['description']) { 
-$return .= <<<EOF
-<br />{$attach['description']}
-EOF;
- } if($attach['readperm']) { 
-$return .= <<<EOF
-<br />阅读权限: {$attach['readperm']}
-EOF;
- } } if(!IS_ROBOT && !$guestviewthumb) { if($attach['price']) { 
-$return .= <<<EOF
-
-<br />售价: {$attach['price']} {$_G['setting']['extcredits'][$_G['setting']['creditstransextra']['1']]['unit']}{$_G['setting']['extcredits'][$_G['setting']['creditstransextra']['1']]['title']}	&nbsp;<a href="forum.php?mod=misc&amp;action=viewattachpayments&amp;aid={$attach['aid']}" onclick="showWindow('attachpay', this.href)" target="_blank">[记录]</a>
-
-EOF;
- if(!$attach['payed']) { 
-$return .= <<<EOF
-
-&nbsp;[<a href="forum.php?mod=misc&amp;action=attachpay&amp;aid={$attach['aid']}&amp;tid={$attach['tid']}" onclick="showWindow('attachpay', this.href)" target="_blank">购买</a>]
-
-EOF;
- } } if(!$attach['attachimg'] && $_G['getattachcredits']) { 
-$return .= <<<EOF
-<br />下载积分: {$_G['getattachcredits']}
-EOF;
- } 
-$return .= <<<EOF
-
-</div>
-<div class="tip_horn"></div>
-</div>
 
 EOF;
  if($musiccode) { 

@@ -208,7 +208,7 @@
 
 <!--以下是回复-->
 <div class="comBox">
-    <h3>COMMENTS已有 $_G[forum_thread][replies] 个人发表评论</h3>
+    <h3>已有 $_G[forum_thread][replies] 个人发表评论</h3>
 
 
 
