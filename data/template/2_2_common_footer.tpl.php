@@ -42,9 +42,6 @@ var focusautoshow = window.setInterval('showfocus(\'next\', 1);', 5000);
 <div style="border-top:0px solid #dadada;background:#f0f0f0;">
 
 <div class="copyright">
-<div class="kun_design_icon">
-<a href="/" title="¹ØÓÚ<?php echo $_G['setting']['bbname'];?>" target="_blank"></a>
-</div>
 <div class="copyright_w">
 <p>
 <?php if($_G['setting']['site_qq']) { ?><a href="http://wpa.qq.com/msgrd?V=3&amp;Uin=<?php echo $_G['setting']['site_qq'];?>&amp;Site=<?php echo $_G['setting']['bbname'];?>&amp;Menu=yes&amp;from=discuz" target="_blank" title="QQ"><img src="<?php echo IMGDIR;?>/site_qq.jpg" alt="QQ" /></a><span class="pipe">|</span><?php } if(is_array($_G['setting']['footernavs'])) foreach($_G['setting']['footernavs'] as $nav) { if($nav['available'] && ($nav['type'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1)) ||
@@ -56,7 +53,7 @@ var focusautoshow = window.setInterval('showfocus(\'next\', 1);', 5000);
 </p>
 </div>
 <div class="copyright_certificate">
-Powered by <strong><a href="http://www.discuz.net" target="_blank">Discuz!</a></strong> <em><?php echo $_G['setting']['version'];?></em><?php if(!empty($_G['setting']['boardlicensed'])) { ?> <a href="http://license.comsenz.com/?pid=1&amp;host=<?php echo $_SERVER['HTTP_HOST'];?>" target="_blank">Licensed</a><?php } ?>&copy; 2001-2013 <a href="http://www.comsenz.com" target="_blank">Comsenz Inc.</a>GMT<?php echo $_G['timenow']['offset'];?>, <?php echo $_G['timenow']['time'];?>
+Powered by <strong><a href="http://www.lingsky.com" target="_blank">Lingksy</a></strong> <em>2014</em>&copy; 2013-2014 <a href="http://www.lingsky.com" target="_blank">Lingsky Inc.</a>GMT<?php echo $_G['timenow']['offset'];?>, <?php echo $_G['timenow']['time'];?>
 <?php if(debuginfo()) { ?>, Processed in <?php echo $_G['debuginfo']['time'];?> second(s), <?php echo $_G['debuginfo']['queries'];?> queries
 <?php if($_G['gzipcompress']) { ?>, Gzip On<?php } if(C::memory()->type) { ?>, <?php echo ucwords(C::memory()->type); ?> On<?php } ?>.
 <?php } ?>

@@ -60,9 +60,6 @@
 <div style="border-top:0px solid #dadada;background:#f0f0f0;">
 
 <div class="copyright">
-	<div class="kun_design_icon">
-		<a href="/" title="¹ØÓÚ$_G['setting']['bbname']" target="_blank"></a>
-	</div>
 	<div class="copyright_w">
 		<p>
 				<!--{if $_G['setting']['site_qq']}--><a href="http://wpa.qq.com/msgrd?V=3&Uin=$_G['setting']['site_qq']&Site=$_G['setting']['bbname']&Menu=yes&from=discuz" target="_blank" title="QQ"><img src="{IMGDIR}/site_qq.jpg" alt="QQ" /></a><span class="pipe">|</span><!--{/if}-->
@@ -75,7 +72,7 @@
 		</p>
 	</div>
 	<div class="copyright_certificate">
-Powered by <strong><a href="http://www.discuz.net" target="_blank">Discuz!</a></strong> <em>$_G['setting']['version']</em><!--{if !empty($_G['setting']['boardlicensed'])}--> <a href="http://license.comsenz.com/?pid=1&host=$_SERVER[HTTP_HOST]" target="_blank">Licensed</a><!--{/if}-->&copy; 2001-2013 <a href="http://www.comsenz.com" target="_blank">Comsenz Inc.</a>{lang time_now}
+Powered by <strong><a href="http://www.lingsky.com" target="_blank">Lingksy</a></strong> <em>2014</em>&copy; 2013-2014 <a href="http://www.lingsky.com" target="_blank">Lingsky Inc.</a>{lang time_now}
 				<!--{if debuginfo()}-->, Processed in $_G[debuginfo][time] second(s), $_G[debuginfo][queries] queries
 					<!--{if $_G['gzipcompress']}-->, Gzip On<!--{/if}--><!--{if C::memory()->type}-->, <!--{echo ucwords(C::memory()->type)}--> On<!--{/if}-->.
 				<!--{/if}-->

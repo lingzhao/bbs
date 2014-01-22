@@ -237,7 +237,7 @@
 					<a title="发布你的完整作品" onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav">
 					<div class="pb">
 					</div>
-					发布作品</a>
+					发布软件</a>
 				</div>
 				<!--[if IE 6]>
 				</div>
@@ -265,10 +265,10 @@
 				<div style="display:none" class="navBtn">
 				<![endif]-->
 				<div class="navBtn">
-					<a title="设计导航" href="/">
+					<a title="加入会员" href="vip.php">
 					<div class="nb">
 					</div>
-					设计导航</a>
+					加入会员</a>
 				</div>
 				<!--[if IE 6]>
 				</div>
@@ -277,7 +277,7 @@
 				<div style="display:none" class="helpBtn">
 				<![endif]-->
 				<div class="helpBtn">
-					<a title="捐助我们" href="/">
+					<a title="捐助我们" href="http://me.alipay.com/esee" target="_blank">
 					<div class="hb">
 					</div>
 					捐助我们</a>

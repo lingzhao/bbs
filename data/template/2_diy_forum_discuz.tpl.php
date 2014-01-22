@@ -8,8 +8,6 @@
 <li><a href="" target="_blank"><img alt="" src="<?php echo IMGDIR;?>/images/3.jpg"/></a></li>
 <li><a href="" target="_blank"><img alt="" src="<?php echo IMGDIR;?>/images/4.jpg"/></a></li>
 <li><a href="" target="_blank"><img alt="" src="<?php echo IMGDIR;?>/images/5.jpg"/></a></li>
-<li><a href="" target="_blank"><img alt="" src="<?php echo IMGDIR;?>/images/6.jpg"/></a></li>
-<li><a href="" target="_blank"><img alt="" src="<?php echo IMGDIR;?>/images/7.jpg"/></a></li>
 </ul>
 </div>
 </div>

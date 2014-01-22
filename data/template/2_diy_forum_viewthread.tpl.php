@@ -1,16 +1,16 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('viewthread');
 0
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header.htm', 1390234373, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node.htm', 1390234373, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_fastpost.htm', 1390234373, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header_common.htm', 1390234373, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header_qmenu.htm', 1390234373, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/pubsearchform.htm', 1390234373, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node_body.htm', 1390234373, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node_body.htm', 1390234373, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/seditor.htm', 1390234373, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/seccheck.htm', 1390234373, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/default/common/upload.htm', 1390234373, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header.htm', 1390407497, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node.htm', 1390407497, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_fastpost.htm', 1390407497, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header_common.htm', 1390407497, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header_qmenu.htm', 1390407497, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/pubsearchform.htm', 1390407497, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node_body.htm', 1390407497, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node_body.htm', 1390407497, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/seditor.htm', 1390407497, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/seccheck.htm', 1390407497, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/default/common/upload.htm', 1390407497, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
 ;?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -496,7 +496,7 @@ initSearchmenu('scbar', '<?php echo $searchparams['url'];?>');
 <a title="发布你的完整作品" onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav">
 <div class="pb">
 </div>
-发布作品</a>
+发布软件</a>
 </div>
 <!--[if IE 6]>
 </div>
@@ -515,10 +515,10 @@ initSearchmenu('scbar', '<?php echo $searchparams['url'];?>');
 <div style="display:none" class="navBtn">
 <![endif]-->
 <div class="navBtn">
-<a title="设计导航" href="/">
+<a title="加入会员" href="vip.php">
 <div class="nb">
 </div>
-设计导航</a>
+加入会员</a>
 </div>
 <!--[if IE 6]>
 </div>
@@ -527,7 +527,7 @@ initSearchmenu('scbar', '<?php echo $searchparams['url'];?>');
 <div style="display:none" class="helpBtn">
 <![endif]-->
 <div class="helpBtn">
-<a title="捐助我们" href="/">
+<a title="捐助我们" href="http://me.alipay.com/esee" target="_blank">
 <div class="hb">
 </div>
 捐助我们</a>
