@@ -68,21 +68,10 @@
 </div>
 <div class="clear">
 </div>
-<p class="simgtxt simgtxthref">
+
 <!--<a href="/" target="_blank">视觉设计</a>-->
 </p>
 
-    <div class="sylist_author" onmouseover="this.className='sylist_author sylist_author1'" onmouseout="this.className='sylist_author'">
-<a href="home.php?mod=space&amp;uid=<?php echo $thread['authorid'];?>" hidefocus="true" class="sylist_tx" >
-<div class="sylist_imgdiv"><?php echo avatar($thread[authorid],small);?></div>
-<div class="sylist_txcover"></div></a>
-<a href="home.php?mod=space&amp;uid=<?php echo $thread['authorid'];?>" hidefocus="true" target="_blank" ><?php echo $thread['author'];?></a>
-
-<?php if(helper_access::check_module('follow')) { ?> 	   
-<a href="home.php?mod=spacecp&amp;ac=follow&amp;op=add&amp;hash=<?php echo FORMHASH;?>&amp;fuid=<?php echo $thread['authorid'];?>" id="followmod_<?php echo $thread['authorid'];?>"  class="hover_follow" onclick="showWindow('followmod', this.href, 'get', 0);">&nbsp;</a>
-<?php } ?>
-
-</div>
 
 <div class="clear">
 </div>
@@ -208,10 +197,10 @@ document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_on
 </div>
 <div class="ry">
 <div class="flipboard">
-<a href="/" title="Flipboard中国签约设计师" target="_blank"></a>
+<a href="/" title="菁菁导航地图" target="_blank"></a>
 </div>
 <div class="hda">
-<a href="/" title="湖南省设计艺术家协会会员" target="_blank"></a>
+<a href="/" title="菁菁视频教程" target="_blank"></a>
 </div>
 </div>
 </div>

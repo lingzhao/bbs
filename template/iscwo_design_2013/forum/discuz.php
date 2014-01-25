@@ -95,21 +95,10 @@
 				</div>
 				<div class="clear">
 				</div>
-				<p class="simgtxt simgtxthref">
+				
 				<!--<a href="/" target="_blank">视觉设计</a>-->
 </p>
 
-    <div class="sylist_author" onmouseover="this.className='sylist_author sylist_author1'" onmouseout="this.className='sylist_author'">
-	<a href="home.php?mod=space&uid=$thread[authorid]" hidefocus="true" class="sylist_tx" >
-	<div class="sylist_imgdiv"><!--{avatar($thread[authorid],small)}--></div>
-	<div class="sylist_txcover"></div></a>
-	<a href="home.php?mod=space&uid=$thread[authorid]" hidefocus="true" target="_blank" >$thread[author]</a>
-	
-	<!--{if helper_access::check_module('follow')}--> 	   
-		<a href="home.php?mod=spacecp&ac=follow&op=add&hash={FORMHASH}&fuid=$thread[authorid]" id="followmod_$thread[authorid]"  class="hover_follow" onclick="showWindow('followmod', this.href, 'get', 0);">&nbsp;</a>
-	<!--{/if}-->
-	
-	</div>
 			
 				<div class="clear">
 				</div>
@@ -240,10 +229,10 @@
 	</div>
 	<div class="ry">
 		<div class="flipboard">
-			<a href="/" title="Flipboard中国签约设计师" target="_blank"></a>
+			<a href="/" title="菁菁导航地图" target="_blank"></a>
 		</div>
 		<div class="hda">
-			<a href="/" title="湖南省设计艺术家协会会员" target="_blank"></a>
+			<a href="/" title="菁菁视频教程" target="_blank"></a>
 		</div>
 	</div>
 </div>
