@@ -80,16 +80,7 @@
 							<!--{/loop}-->
 						<!--{/if}-->
 
-						<!--{if $_G['forum']['threadsorts']}-->
-							<!--{if $_G['forum']['threadtypes']}--><li><span class="pipe">|</span></li><!--{/if}-->
-							<!--{loop $_G['forum']['threadsorts']['types'] $id $name}-->
-								<!--{if $_GET['sortid'] == $id}-->
-								<li class="xw1 a"><a href="forum.php?mod=forumdisplay&fid=$_G[fid]{if $_GET['typeid']}&filter=typeid&typeid=$_GET['typeid']{/if}{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}">$name</a></li>
-								<!--{else}-->
-								<li><a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=sortid&sortid=$id$forumdisplayadd[sortid]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}">$name</a></li>
-								<!--{/if}-->
-							<!--{/loop}-->
-						<!--{/if}-->
+
 						<!--{hook/forumdisplay_filter_extra}-->
 					</ul>
 					<script type="text/javascript">showTypes('thread_types');</script>
@@ -332,21 +323,9 @@
 				</div>
 				<div class="clear">
 				</div>
-				<p class="simgtxt simgtxthref">
-					<a href="forum.php?mod=forumdisplay&fid=$_G[fid]" target="_blank">$_G['forum'][name]</a>
-</p>
 
-    <div class="sylist_author" onmouseover="this.className='sylist_author sylist_author1'" onmouseout="this.className='sylist_author'">
-	<a href="home.php?mod=space&uid=$thread[authorid]" hidefocus="true" class="sylist_tx" >
-	<div class="sylist_imgdiv"><!--{avatar($thread[authorid],small)}--></div>
-	<div class="sylist_txcover"></div></a>
-	<a href="home.php?mod=space&uid=$thread[authorid]" hidefocus="true" target="_blank" >$thread[author]</a>
-	
-	<!--{if helper_access::check_module('follow')}--> 	   
-		<a href="home.php?mod=spacecp&ac=follow&op=add&hash={FORMHASH}&fuid=$thread[authorid]" id="followmod_$thread[authorid]"  class="hover_follow" onclick="showWindow('followmod', this.href, 'get', 0);">&nbsp;</a>
-	<!--{/if}-->
-	
-	</div>
+
+
 			
 				<div class="clear">
 				</div>

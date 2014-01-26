@@ -1,4 +1,5 @@
-<?php if(!defined('IN_DISCUZ')) exit('Access Denied'); include template('common/header_bbs'); ?><div id="banner">
+<?php if(!defined('IN_DISCUZ')) exit('Access Denied'); 
+block_get('7,8,9,10,4,5');?><?php include template('common/header_bbs'); ?><div id="banner">
 <i id="focusBtl" class="focusBts"></i>
 <i id="focusBtr" class="focusBts"></i>
 <div id="focusAdv">
@@ -16,7 +17,7 @@
 <?php if($iscwo_header_nv==1) { ?>
 
 <div id="iNeedBar">
-    会员朋友可以随时在这里发布作品，我们将针对您的作品，进行选择加入优秀作品，点击右侧按钮，发布一个需求吧~
+    会员朋友可以随时在这里寻求软件，我们将针对您的需求，寻找并发布最新的软件。点击右侧按钮，发布一个需求吧~
    <a title="发布需求" onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav">发布需求</a>
 </div>
 
@@ -31,13 +32,15 @@
 <?php } ?>
 
 
+<div style="height:30px"></div>
+
 <div id="wp" class="wp">
 <?php if(empty($gid)) { ?><?php echo adshow("text/wp a_t");?><?php } ?>
 
-<style id="diy_style" type="text/css"></style>
+<style id="diy_style" type="text/css">#portal_block_5 {  margin-left:2px !important;}#portal_block_9 {  margin-left:2px !important;}</style>
 
 <div class="wp1024">
-<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+<!--[diy=diy1]--><div id="diy1" class="area"><div id="frameernG4t" class="sy_f2 frame move-span cl frame-1-1-1"><div id="frameernG4t_left" class="column frame-1-1-1-l"><div id="frameernG4t_left_temp" class="move-span temp"></div><?php block_display('7');?></div><div id="frameernG4t_center" class="column frame-1-1-1-c"><div id="frameernG4t_center_temp" class="move-span temp"></div><?php block_display('8');?><?php block_display('9');?></div><div id="frameernG4t_right" class="column frame-1-1-1-r"><div id="frameernG4t_right_temp" class="move-span temp"></div><?php block_display('10');?></div></div><div id="frame2w11FM" class="frame move-span cl frame-1"><div id="frame2w11FM_left" class="column frame-1-c"><div id="frame2w11FM_left_temp" class="move-span temp"></div><?php block_display('4');?><?php block_display('5');?></div></div></div><!--[/diy]-->
 </div>
 
 <div id="shoucang"><?php $list_count=0;?><?php if(is_array($threadlist)) foreach($threadlist as $thread) { $list_count+=1;?><div class="scitem scitemimage show"<?php if($list_count%3==0) { ?>style="margin-right: 0px;"<?php } ?>>

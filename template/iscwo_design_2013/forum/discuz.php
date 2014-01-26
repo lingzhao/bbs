@@ -20,7 +20,7 @@
 <!--{if $iscwo_header_nv==1}-->
 
 <div id="iNeedBar">
-    会员朋友可以随时在这里发布作品，我们将针对您的作品，进行选择加入优秀作品，点击右侧按钮，发布一个需求吧~
+    会员朋友可以随时在这里寻求软件，我们将针对您的需求，寻找并发布最新的软件。点击右侧按钮，发布一个需求吧~
    <a title="发布需求" onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav">发布需求</a>
 </div>
 
@@ -42,6 +42,8 @@
 
 <!--{/loop}-->
 
+
+<div style="height:30px"></div>
 
 <div id="wp" class="wp">
 <!--{if empty($gid)}-->

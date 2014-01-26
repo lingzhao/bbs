@@ -1,16 +1,16 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('viewthread');
 0
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header.htm', 1390630259, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node.htm', 1390630259, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_fastpost.htm', 1390630259, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header_common.htm', 1390630259, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header_qmenu.htm', 1390630259, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/pubsearchform.htm', 1390630259, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node_body.htm', 1390630259, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node_body.htm', 1390630259, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/seditor.htm', 1390630259, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/seccheck.htm', 1390630259, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/default/common/upload.htm', 1390630259, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_fastpost.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header_common.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header_qmenu.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/pubsearchform.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node_body.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node_body.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/seditor.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/seccheck.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/default/common/upload.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
 ;?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -591,7 +591,7 @@ initSearchmenu('scbar', '<?php echo $searchparams['url'];?>');
 
 
    <?php $lzthread = DB::fetch_all("SELECT `tid`,`subject` FROM ".DB::table('forum_thread')." WHERE authorid =$theuid AND cover = 1 ORDER BY dateline DESC LIMIT 0,4 ");?><div class="s-box sads group">
-<h3 class="title">作者其它作品</h3>
+<h3 class="title">相关软件推荐</h3>
 
 <ul class="excli group cl"><?php if(is_array($lzthread)) foreach($lzthread as $thethread) { ?><li><a href="forum.php?mod=viewthread&amp;tid=<?php echo $thethread['tid'];?>" target="_blank"><?php $thethread['coverpath'] = getthreadcover($thethread['tid'], 1);?>    <img src="<?php echo $thethread['coverpath'];?>"/></a></li>
 <?php } ?>
@@ -661,17 +661,20 @@ document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_on
 <div class="Rlsuser">
 <div class="vt_titlel">
 
-<a href="home.php?mod=space&amp;uid=<?php echo $_G['forum_thread']['authorid'];?>" title="<?php echo $_G['forum_thread']['author'];?>"><?php echo avatar($_G[forum_thread][authorid],middle);?></a>
+<a href="vip.php">
+          <?php $syaidtable='forum_attachment_'.$thread[tid]%10;?>          <?php $fujian=DB::result_first("SELECT `attachment` FROM ".DB::table($syaidtable)." WHERE tid=$thread[tid] AND isimage=1");?>          <?php if($fujian) { ?>
+          <?php $iconurl='data/attachment/forum/'.$fujian?>          <?php } else { ?>
+          <?php $iconurl='static/image/common/nophotosmall.gif'?> 
+          <?php } ?>
+          <img src='<?php echo $iconurl;?>'></img> 
+</a>
 <h1>
-<?php if($threadsorts && $_G['forum_thread']['sortid']) { ?>
-<a href="forum.php?mod=forumdisplay&amp;fid=<?php echo $_G['fid'];?>&amp;filter=sortid&amp;sortid=<?php echo $_G['forum_thread']['sortid'];?>" class="vt_type">[<?php echo $_G['forum']['threadsorts']['types'][$_G['forum_thread']['sortid']];?>]</a>
-<?php } ?>
 <a href="forum.php?mod=viewthread&amp;tid=<?php echo $_G['tid'];?>" id="thread_subject" title="<?php echo $_G['forum_thread']['subject'];?>" class="vt_title"><?php echo $_G['forum_thread']['subject'];?></a>
 <?php if($_G['forum_thread']['digest'] > 0 && $filter != 'digest') { ?>
 <font title="精华帖" color="red">精</font>
 <?php } ?>
 </h1>
-<span class="byto">By <a href="home.php?mod=space&amp;uid=<?php echo $_G['forum_thread']['authorid'];?>" title="由 <?php echo $_G['forum_thread']['author'];?> 发布" rel="author"><?php echo $_G['forum_thread']['author'];?></a> / 浏览 <?php echo $_G['forum_thread']['views'];?> 次 / <?php echo $_G['forum_thread']['replies'];?>条评论 / 来自于<a href="forum.php?mod=forumdisplay&amp;fid=<?php echo $_G['fid'];?>" class="vt_type">[ <?php echo $_G['forum']['name'];?> ]</a></span>
+<span class="byto"> 浏览 <?php echo $_G['forum_thread']['views'];?> 次 / <?php echo $_G['forum_thread']['replies'];?>条评论 / 软件分类&nbsp;<a href="forum.php?mod=forumdisplay&amp;fid=<?php echo $_G['fid'];?>" class="vt_type">[ <?php echo $_G['forum']['name'];?> ]</a></span>
 </div>   
 
 <div class="vt_titler">
