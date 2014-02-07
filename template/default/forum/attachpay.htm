@@ -27,19 +27,23 @@
 					<td><div style="overflow:hidden">$truncatedsubject</div></td>
 				</tr>
 				<tr>
-					<td>价格({$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]})</td>
-					<td align=center><b><font color=red>$attach[price] {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}</font></b></td>
+					<td>售价({$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]})</td>
+					<td><b><font color=red>$attach[price] {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}</font></b></td>
 				</tr>
 				<!--{if $status != 1}-->
 				<tr>
 					<td>余额({$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]})</td>
-					<td align=center>$balance {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}</td>
+					<td>$balance {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}</td>
 				</tr>
 				<!--{/if}-->
 				<!--{if $status == 1}-->
 				<tr>
-					<td>&nbsp;</td>
-					<td>{lang status_insufficient}</td>
+					<td></td>
+					<td>{lang status_insufficient} &nbsp; <a href='home.php?mod=spacecp&ac=credit&op=buy'>点击此处充值</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><a href='vip.php'>VIP会员下载无需菁菁币 [点击查看]<a>&nbsp; &nbsp;<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=175712736&amp;site=qq&amp;menu=yes"><img border="0" src="template/iscwo_design_2013/img/site_qq.jpg" alt="点击这里给我发消息" title="点击这里给我发消息" style="vertical-align:middle;"></a></td>
 				</tr>
 				<!--{elseif $status == 2}-->
 				<tr>

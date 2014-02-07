@@ -1,23 +1,23 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('viewthread');
 0
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_fastpost.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header_common.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header_qmenu.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/pubsearchform.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node_body.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node_body.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/seditor.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/seccheck.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
-|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/default/common/upload.htm', 1390721723, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header.htm', 1391697739, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node.htm', 1391697739, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_fastpost.htm', 1391697739, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header_common.htm', 1391697739, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/header_qmenu.htm', 1391697739, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/pubsearchform.htm', 1391697739, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node_body.htm', 1391697739, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/forum/viewthread_node_body.htm', 1391697739, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/seditor.htm', 1391697739, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/iscwo_design_2013/common/seccheck.htm', 1391697739, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
+|| checktplrefresh('./template/iscwo_design_2013/forum/viewthread.htm', './template/default/common/upload.htm', 1391697739, 'diy', './data/template/2_diy_forum_viewthread.tpl.php', './template/iscwo_design_2013', 'forum/viewthread')
 ;?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo CHARSET;?>" />
 <?php if($_G['config']['output']['iecompatible']) { ?><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE<?php echo $_G['config']['output']['iecompatible'];?>" /><?php } ?>
-<title><?php if(!empty($navtitle)) { ?><?php echo $navtitle;?> - <?php } if(empty($nobbname)) { ?> <?php echo $_G['setting']['bbname'];?> - <?php } ?> Powered by Discuz!</title>
+<title><?php if(!empty($navtitle)) { ?><?php echo $navtitle;?>   <?php } if(empty($nobbname)) { ?> <?php echo $_G['setting']['bbname'];?><?php } ?></title>
 <?php echo $_G['setting']['seohead'];?>
 
 <meta name="keywords" content="<?php if(!empty($metakeywords)) { echo dhtmlspecialchars($metakeywords); } ?>" />
@@ -463,6 +463,39 @@ initSearchmenu('scbar', '<?php echo $searchparams['url'];?>');
 <?php if(!empty($_G['setting']['pluginhooks']['viewthread_title_row'])) echo $_G['setting']['pluginhooks']['viewthread_title_row'];?>
 
 
+<div class="Rlsuser">
+<div class="vt_titlel">
+
+<a href="vip.php">
+          <?php $syaidtable='forum_attachment_'.$thread[tid]%10;?>          <?php $fujian=DB::result_first("SELECT `attachment` FROM ".DB::table($syaidtable)." WHERE tid=$thread[tid] AND isimage=1");?>          <?php if($fujian) { ?>
+          <?php $iconurl='data/attachment/forum/'.$fujian?>          <?php } else { ?>
+          <?php $iconurl='static/image/common/nophotosmall.gif'?> 
+          <?php } ?>
+          <img src='<?php echo $iconurl;?>'></img> 
+</a>
+<h1>
+<a href="forum.php?mod=viewthread&amp;tid=<?php echo $_G['tid'];?>" id="thread_subject" title="<?php echo $_G['forum_thread']['subject'];?>" class="vt_title"><?php echo $_G['forum_thread']['subject'];?></a>
+<?php if($_G['forum_thread']['digest'] > 0 && $filter != 'digest') { ?>
+<font title="精华帖" color="red">精</font>
+<?php } ?>
+</h1>
+<span class="byto"> 浏览 <?php echo $_G['forum_thread']['views'];?> 次 / <?php echo $_G['forum_thread']['replies'];?>条评论 / 软件分类&nbsp;<a href="forum.php?mod=forumdisplay&amp;fid=<?php echo $_G['fid'];?>" class="vt_type">[ <?php echo $_G['forum']['name'];?> ]</a></span>
+</div>   
+
+<div class="vt_titler">
+
+   <?php if($post['invisible'] == 0) { ?>
+   <?php if(($_G['group']['allowrecommend'] || !$_G['uid']) && $_G['setting']['recommendthread']['status']) { if(!empty($_G['setting']['recommendthread']['addtext'])) { ?>
+<a id="recommend_add" class="vt_like" hidefocus="true" href="forum.php?mod=misc&amp;action=recommend&amp;do=add&amp;tid=<?php echo $_G['tid'];?>&amp;hash=<?php echo FORMHASH;?>" <?php if($_G['uid']) { ?>onclick="ajaxmenu(this, 3000, 1, 0, '43', 'recommendupdate(<?php echo $_G['group']['allowrecommend'];?>)');return false;"<?php } else { ?> onclick="showWindow('login', this.href)"<?php } ?> onmouseover="this.title = $('recommendv_add').innerHTML + ' 人喜欢'"><span id="recommendv_add"><?php echo $_G['forum_thread']['recommend_add'];?></span></a>
+<?php } ?>
+
+   <?php } ?>
+   <?php } ?>
+   
+</div>   
+
+</div>
+
 <div class="Post box">
 
 <div id="sidebar" class="group" style="float:right;">
@@ -489,6 +522,7 @@ initSearchmenu('scbar', '<?php echo $searchparams['url'];?>');
 
 <div class="s-box">
 <div class="group cl">
+    <?php if($_G['adminid'] == 1) { ?>
 <!--[if IE 6]>
 <div style="display:none" class="postBtn">
 <![endif]-->
@@ -501,6 +535,7 @@ initSearchmenu('scbar', '<?php echo $searchparams['url'];?>');
 <!--[if IE 6]>
 </div>
 <![endif]-->
+<?php } ?>
 
 <h2>热门标签</h2>
 <p class="cl">
@@ -658,40 +693,6 @@ document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_on
 
 
 <div class="Lview">
-<div class="Rlsuser">
-<div class="vt_titlel">
-
-<a href="vip.php">
-          <?php $syaidtable='forum_attachment_'.$thread[tid]%10;?>          <?php $fujian=DB::result_first("SELECT `attachment` FROM ".DB::table($syaidtable)." WHERE tid=$thread[tid] AND isimage=1");?>          <?php if($fujian) { ?>
-          <?php $iconurl='data/attachment/forum/'.$fujian?>          <?php } else { ?>
-          <?php $iconurl='static/image/common/nophotosmall.gif'?> 
-          <?php } ?>
-          <img src='<?php echo $iconurl;?>'></img> 
-</a>
-<h1>
-<a href="forum.php?mod=viewthread&amp;tid=<?php echo $_G['tid'];?>" id="thread_subject" title="<?php echo $_G['forum_thread']['subject'];?>" class="vt_title"><?php echo $_G['forum_thread']['subject'];?></a>
-<?php if($_G['forum_thread']['digest'] > 0 && $filter != 'digest') { ?>
-<font title="精华帖" color="red">精</font>
-<?php } ?>
-</h1>
-<span class="byto"> 浏览 <?php echo $_G['forum_thread']['views'];?> 次 / <?php echo $_G['forum_thread']['replies'];?>条评论 / 软件分类&nbsp;<a href="forum.php?mod=forumdisplay&amp;fid=<?php echo $_G['fid'];?>" class="vt_type">[ <?php echo $_G['forum']['name'];?> ]</a></span>
-</div>   
-
-<div class="vt_titler">
-
-   <?php if($post['invisible'] == 0) { ?>
-   <?php if(($_G['group']['allowrecommend'] || !$_G['uid']) && $_G['setting']['recommendthread']['status']) { if(!empty($_G['setting']['recommendthread']['addtext'])) { ?>
-<a id="recommend_add" class="vt_like" hidefocus="true" href="forum.php?mod=misc&amp;action=recommend&amp;do=add&amp;tid=<?php echo $_G['tid'];?>&amp;hash=<?php echo FORMHASH;?>" <?php if($_G['uid']) { ?>onclick="ajaxmenu(this, 3000, 1, 0, '43', 'recommendupdate(<?php echo $_G['group']['allowrecommend'];?>)');return false;"<?php } else { ?> onclick="showWindow('login', this.href)"<?php } ?> onmouseover="this.title = $('recommendv_add').innerHTML + ' 人喜欢'"><span id="recommendv_add"><?php echo $_G['forum_thread']['recommend_add'];?></span></a>
-<?php } ?>
-
-   <?php } ?>
-   <?php } ?>
-   
-</div>   
-
-</div>
-
-
 
 <div class="Lvipic">
 <div class="Lvpleft"><?php $postcount = 0;?><?php if(is_array($postlist)) foreach($postlist as $post) { if($rushreply && $_GET['checkrush'] && $post['rewardfloor'] != 1) { continue;?><?php } ?>

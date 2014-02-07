@@ -21,7 +21,7 @@
 
 <div id="iNeedBar">
     会员朋友可以随时在这里寻求软件，我们将针对您的需求，寻找并发布最新的软件。点击右侧按钮，发布一个需求吧~
-   <a title="发布需求" onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav">发布需求</a>
+   <a title="发布需求" {if $_G['adminid'] == 1} onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav"{else} href="forum.php?mod=post&action=newthread&fid=72"{/if}>发布需求</a>
 </div>
 
 <!--{/if}-->
@@ -63,25 +63,24 @@
 <!--{eval $list_count+=1;}-->
 
 		<div class="scitem scitemimage show"{if $list_count%3==0}style="margin-right: 0px;"{/if}>
-		<!--{if $thread['attachment'] == 2}-->
-			<a style="text-decoration:underline;color: #000" class="simage" href="forum.php?mod=viewthread&tid=$thread[tid]" target="_blank">
-			<!--{eval $thread['coverpath'] = getthreadcover($thread['tid'], 1);}-->
-			<img style="width: 290px;height:180px" src="$thread[coverpath]" onerror='this.src="template/iscwo_design_2013/img/nophoto.gif"' border='0' />
-			<div class="simagemask">
-				<p>
-					$thread[subject]{echo messagecutstr(strip_tags($thread['post']['message']), 200);}
-				</p>
-			</div>
-			</a>
+		
+		<!--{eval $syaidtable='forum_attachment_'.$thread[tid]%10;}-->
+		<!--{eval $fujian=DB::result_first("SELECT `attachment` FROM ".DB::table($syaidtable)." WHERE tid=$thread[tid] AND isimage=1");}-->
+		<!--{if $fujian}-->
+		    <!--{eval $iconurl='data/attachment/forum/'.$fujian}-->
 		<!--{else}-->
-			<div class="simage">
-			<div class="simagemaskall">
-				<p>
-					$thread[subject]{echo messagecutstr(strip_tags($thread['post']['message']), 200);}
-				</p>
-			</div>
-			</div>
+		    <!--{eval $iconurl='static/image/common/nophotosmall.gif'}--> 
 		<!--{/if}-->
+		
+		<a style="text-decoration:underline;color: #000" class="simage" href="forum.php?mod=viewthread&tid=$thread[tid]" target="_blank">
+		<img style="width: 290px;height:180px" src="$iconurl" onerror='this.src="template/iscwo_design_2013/img/nophoto.gif"' border='0' />
+		<div class="simagemask">
+			<p>
+				$thread[subject]{echo messagecutstr(strip_tags($thread['post']['message']), 200);}
+			</p>
+		</div>
+		</a>
+		
 			<div class="simgbody">
 				<div class="simgh">
 					<a href="forum.php?mod=viewthread&tid=$thread[tid]" class="simgtitle" target="_blank">$thread[subject]</a>

@@ -1,4 +1,19 @@
 {template dsu_kkvip:header}
+
+<div class="orights vipblock">
+<h3 class="title">&#23562;&#36149;&#29305;&#26435;</h3>
+<div class="content">
+{if !$vip->is_vip()}
+<p>&#x5C0A;&#x656C;&#x7684;$_G[member][username], &#29616;&#22312;&#25104;&#20026;&#20250;&#21592;&#65292;&#24744;&#21487;&#20197;&#20139;&#21463;&#20197;&#19979;&#20248;&#24800;&#21644;&#29305;&#26435;&#65306;</p>
+{else}
+<p>&#23562;&#36149;&#30340;&#20250;&#21592;&#65292;&#24744;&#30340;&#25104;&#38271;&#38454;&#27573;&#20026;<img src="source/plugin/dsu_kkvip/images/vip$_G[vip][level].gif" alt="$_G[vip][level_text]" />&#12290;&#22312;&#30446;&#21069;&#30340;&#25104;&#38271;&#38454;&#27573;&#65292;&#24744;&#20139;&#21463;&#20197;&#19979;&#30340;&#29305;&#26435;&#12290;&#24744;&#30340;&#20250;&#21592;&#21040;&#26399;&#26102;&#38388;&#65306; $_G[vip][exptime_text]</p>
+{/if}
+<ul>
+$vip_intro
+</ul>
+</div>
+</div>
+
 {if $vars['month']}
 <div class="pay">
 <form method="post" action="vip.php?action=payment&plugin=kk_vip_payment" onsubmit="$('submit_btn').disabled='disabled';">
@@ -24,6 +39,7 @@
 </form>
 </div>
 {/if}
+
 {if $vars['plan']}
 <div class="pay">
 <form method="post" action="vip.php?action=payment&plugin=kk_vip_payment">
@@ -35,40 +51,41 @@
 <th>&#36873;&#25321;</th>
 <th>&#22871;&#39184;&#21517;&#31216;</th>
 <th>&#22871;&#39184;&#20215;&#26684;</th>
-<th>&#22871;&#39184;&#21253;&#21547; VIP &#26399;&#38480;</th>
+<th>&#x6709;&#x6548;&#x671F;</th>
+<th></th>
 </tr>
 {loop $plans $plan}
-<tr onclick="$('plan_{$plan[id]}').click()">
+<tr class="onthis" onclick="$('plan_{$plan[id]}').click()">
 <td><input type="radio" name="planid" id="plan_{$plan[id]}" value="{$plan[id]}" /></td>
 <td><img src="source/plugin/dsu_kkvip/images/vip.png" class="vm" />
-<font color="red">{$plan[name]}</font></td>
+<font color="red">{$plan[name]}{if $plan[id]==2}&nbsp;<img src="static/image/custom/hotvip.gif">{/if}</font></td>
 <td>RMB {$plan[money]}</td>
-<td>{$plan[days]} &#22825;</td>
+<td>{if $plan[id]==4}<font color="red">&#x7EC8;&#x8EAB;&#x4F1A;&#x5458;{else}{$plan[days]} &#22825;</font>{/if}</td>
+<td>
+{if $plan[id]==4}&#x6700;&#x9AD8;&#x7EA7;VIP&#x670D;&#x52A1;&#xFF0C;&#x4EAB;&#x53D7;&#x7EC8;&#x8EAB;&#x4F1A;&#x5458;&#x7279;&#x6743;&#xFF0C;&#x6C38;&#x4E45;&#x514D;&#x8D39;&#x4E0B;&#x8F7D;{/if}
+{if $plan[id]==3}&#x5C0A;&#x4EAB;&#x4E00;&#x6574;&#x5E74;VIP&#x7279;&#x6743;&#x670D;&#x52A1;&#xFF0C;<font color="red">&#x5E73;&#x5747;&#x6BCF;&#x6708;&#x53EA;&#x8981; 9 &#x5143;</font>&#xFF0C;&#x8D85;&#x503C;&#x63A8;&#x8350;&#xFF01;{/if}
+{if $plan[id]==2}&#x4EAB;&#x53D7;&#x4E09;&#x4E2A;&#x6708;VIP&#x7279;&#x6743;&#x670D;&#x52A1;{/if}
+{if $plan[id]==1}VIP&#x4E00;&#x4E2A;&#x6708;&#x65E0;&#x9650;&#x9AD8;&#x901F;&#x4E0B;&#x8F7D;{/if}
+</td>
+
 </tr>
 {/loop}
 </table>
-<div style="padding: 10px 0 0;text-align: right;">
-<button type="submit" style="background: url(source/plugin/kk_vip_payment/template/buynow.png); border: 0;width: 129px; height: 38px" class="vm"></button>
+<div style="padding: 10px 0 0;text-align: left;">
+<button type="submit" style="background: url(source/plugin/kk_vip_payment/template/buynow.png); border: 0;width: 129px; height: 38px;cursor: pointer;" class="vm" ></button>
+<span style="left:43px;position:relative;vertical-align: middle;"><a style="color:#0099FF;" target="_blank" href="misc.php?mod=faq&action=faq&id=1">&#x67E5;&#x770B;&#x652F;&#x4ED8;&#x5E2E;&#x52A9;&#x3010;&#x652F;&#x4ED8;&#x5B9D;&#x3011;</a> &nbsp;&#x5728;&#x7EBF;&#x5BA2;&#x670D;&#xFF1A;<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=175712736&amp;site=Lingsky&amp;menu=yes" target="_blank"><img border="0" title="QQ&#x5728;&#x7EBF;&#x54A8;&#x8BE2;" alt="QQ&#x5728;&#x7EBF;&#x54A8;&#x8BE2;" src="http://wpa.qq.com/pa?p=2:175712736:51" style="vertical-align:middle;"></a></span>
+
 </div>
 </div>
 </form>
 </div>
 {/if}
-<div class="orights vipblock">
-<h3 class="title">&#23562;&#36149;&#29305;&#26435;</h3>
-<div class="content">
-{if !$vip->is_vip()}
-<p>&#29616;&#22312;&#25104;&#20026;&#20250;&#21592;&#65292;&#24744;&#21487;&#20197;&#20139;&#21463;&#20197;&#19979;&#20248;&#24800;&#21644;&#29305;&#26435;&#65306;</p>
-{else}
-<p>&#23562;&#36149;&#30340;&#20250;&#21592;&#65292;&#24744;&#30340;&#25104;&#38271;&#38454;&#27573;&#20026;<img src="source/plugin/dsu_kkvip/images/vip$_G[vip][level].gif" alt="$_G[vip][level_text]" />&#12290;&#22312;&#30446;&#21069;&#30340;&#25104;&#38271;&#38454;&#27573;&#65292;&#24744;&#20139;&#21463;&#20197;&#19979;&#30340;&#29305;&#26435;&#12290;&#24744;&#30340;&#20250;&#21592;&#21040;&#26399;&#26102;&#38388;&#65306; $_G[vip][exptime_text]</p>
-{/if}
-<ul>
-$vip_intro
-</ul>
-</div>
-</div>
+
 </div></div>
 <div class="sd">{template dsu_kkvip:vip_sidebar}</div></div>
 
+<script type="text/javascript">
+$('plan_3').click();
+</script>
 
 {template common/footer}

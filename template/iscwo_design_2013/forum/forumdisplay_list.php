@@ -300,10 +300,11 @@
 
 		<div class="scitem scitemimage show"{if $list_count%3==0}style="margin-right: 0px;"{/if}>
 			<a style="text-decoration:underline;color: #000" class="simage" href="forum.php?mod=viewthread&tid=$thread[tid]" target="_blank">
-			<!--{eval $thread['coverpath'] = getthreadcover($thread['tid'], 1);}-->
-		<!--{if $thread['cover']}-->
-		<!--{eval $thread['coverpath'] = getthreadcover($thread['tid'], 1);}-->
-			<img style="width: 290px;height:180px" src="$thread[coverpath]"/>
+          <!--{eval $syaidtable='forum_attachment_'.$thread[tid]%10;}-->
+          <!--{eval $fujian=DB::result_first("SELECT `attachment` FROM ".DB::table($syaidtable)." WHERE tid=$thread[tid] AND isimage=1");}-->
+          <!--{if $fujian}-->
+          <!--{eval $iconurl='data/attachment/forum/'.$fujian}-->
+          <img style="width: 290px;height:180px" src="$iconurl"/>
 		<!--{else}-->
 		<span class="nopic"></span>
 		<!--{/if}-->

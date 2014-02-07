@@ -21,7 +21,7 @@
 
 <div id="iNeedBar">
     会员朋友可以随时在这里寻求软件，我们将针对您的需求，寻找并发布最新的软件。点击右侧按钮，发布一个需求吧~
-   <a title="发布需求" onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav">发布需求</a>
+   <a title="发布需求" {if $_G['adminid'] == 1} onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav"{else} href="forum.php?mod=post&action=newthread&fid=72"{/if}>发布需求</a>
 </div>
 
 <!--{/if}-->

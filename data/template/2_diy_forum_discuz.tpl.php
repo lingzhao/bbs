@@ -18,7 +18,7 @@ block_get('7,8,9,10,4,5');?><?php include template('common/header_bbs'); ?><div 
 
 <div id="iNeedBar">
     会员朋友可以随时在这里寻求软件，我们将针对您的需求，寻找并发布最新的软件。点击右侧按钮，发布一个需求吧~
-   <a title="发布需求" onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav">发布需求</a>
+   <a title="发布需求" <?php if($_G['adminid'] == 1) { ?> onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav"<?php } else { ?> href="forum.php?mod=post&amp;action=newthread&amp;fid=72"<?php } ?>>发布需求</a>
 </div>
 
 <?php } if(is_array($catlist)) foreach($catlist as $key => $cat) { ?><div style="margin-bottom: 1px;" class="hd cl">
@@ -43,22 +43,19 @@ block_get('7,8,9,10,4,5');?><?php include template('common/header_bbs'); ?><div 
 <!--[diy=diy1]--><div id="diy1" class="area"><div id="frameernG4t" class="sy_f2 frame move-span cl frame-1-1-1"><div id="frameernG4t_left" class="column frame-1-1-1-l"><div id="frameernG4t_left_temp" class="move-span temp"></div><?php block_display('7');?></div><div id="frameernG4t_center" class="column frame-1-1-1-c"><div id="frameernG4t_center_temp" class="move-span temp"></div><?php block_display('8');?><?php block_display('9');?></div><div id="frameernG4t_right" class="column frame-1-1-1-r"><div id="frameernG4t_right_temp" class="move-span temp"></div><?php block_display('10');?></div></div><div id="frame2w11FM" class="frame move-span cl frame-1"><div id="frame2w11FM_left" class="column frame-1-c"><div id="frame2w11FM_left_temp" class="move-span temp"></div><?php block_display('4');?><?php block_display('5');?></div></div></div><!--[/diy]-->
 </div>
 
-<div id="shoucang"><?php $list_count=0;?><?php if(is_array($threadlist)) foreach($threadlist as $thread) { $list_count+=1;?><div class="scitem scitemimage show"<?php if($list_count%3==0) { ?>style="margin-right: 0px;"<?php } ?>>
-<?php if($thread['attachment'] == 2) { ?>
-<a style="text-decoration:underline;color: #000" class="simage" href="forum.php?mod=viewthread&amp;tid=<?php echo $thread['tid'];?>" target="_blank"><?php $thread['coverpath'] = getthreadcover($thread['tid'], 1);?><img style="width: 290px;height:180px" src="<?php echo $thread['coverpath'];?>" onerror='this.src="template/iscwo_design_2013/img/nophoto.gif"' border='0' />
+<div id="shoucang"><?php $list_count=0;?><?php if(is_array($threadlist)) foreach($threadlist as $thread) { $list_count+=1;?><div class="scitem scitemimage show"<?php if($list_count%3==0) { ?>style="margin-right: 0px;"<?php } ?>><?php $syaidtable='forum_attachment_'.$thread[tid]%10;?><?php $fujian=DB::result_first("SELECT `attachment` FROM ".DB::table($syaidtable)." WHERE tid=$thread[tid] AND isimage=1");?><?php if($fujian) { ?>
+    <?php $iconurl='data/attachment/forum/'.$fujian?><?php } else { ?>
+    <?php $iconurl='static/image/common/nophotosmall.gif'?> 
+<?php } ?>
+
+<a style="text-decoration:underline;color: #000" class="simage" href="forum.php?mod=viewthread&amp;tid=<?php echo $thread['tid'];?>" target="_blank">
+<img style="width: 290px;height:180px" src="<?php echo $iconurl;?>" onerror='this.src="template/iscwo_design_2013/img/nophoto.gif"' border='0' />
 <div class="simagemask">
 <p>
 <?php echo $thread['subject'];?><?php echo messagecutstr(strip_tags($thread['post']['message']), 200);; ?></p>
 </div>
 </a>
-<?php } else { ?>
-<div class="simage">
-<div class="simagemaskall">
-<p>
-<?php echo $thread['subject'];?><?php echo messagecutstr(strip_tags($thread['post']['message']), 200);; ?></p>
-</div>
-</div>
-<?php } ?>
+
 <div class="simgbody">
 <div class="simgh">
 <a href="forum.php?mod=viewthread&amp;tid=<?php echo $thread['tid'];?>" class="simgtitle" target="_blank"><?php echo $thread['subject'];?></a><?php $syaidtable='forum_attachment_'.$thread[tid]%10;?><?php $fujian=DB::result_first("SELECT `aid` FROM ".DB::table($syaidtable)." WHERE tid=$thread[tid] AND isimage=0");?><?php if($fujian) { ?>

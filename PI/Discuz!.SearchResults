@@ -1,1 +1,8 @@
----- data\attachment Matches (0 in 0 files) ----
+---- scitem scitemimage show Matches (4 in 4 files) ----
+2_diy_forum_discuz.tpl.php (data\template):<div id="shoucang"><?php $list_count=0;?><?php if(is_array($threadlist)) foreach($threadlist as $thread) { $list_count+=1;?><div class="scitem scitemimage show"<?php if($list_count%3==0) { ?>style="margin-right: 0px;"<?php } ?>>
+Discuz.htm (data\diy\template\iscwo_design_2013\forum):		<div class="scitem scitemimage show"{if $list_count%3==0}style="margin-right: 0px;"{/if}>
+Discuz.php (template\iscwo_design_2013\forum):		<div class="scitem scitemimage show"{if $list_count%3==0}style="margin-right: 0px;"{/if}>
+Forumdisplay_list.php (template\iscwo_design_2013\forum):		<div class="scitem scitemimage show"{if $list_count%3==0}style="margin-right: 0px;"{/if}>
+---- vt_titlel Matches (2 in 2 files) ----
+Index.css (template\iscwo_design_2013\img):.vt_titlel{ float:left; width:860px; overflow:hidden;}
+Viewthread.php (template\iscwo_design_2013\forum):<div class="vt_titlel">

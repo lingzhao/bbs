@@ -167,6 +167,43 @@
 	<!--{hook/viewthread_title_row}-->
 
 
+<div class="Rlsuser">
+<div class="vt_titlel">
+
+			<a href="vip.php">
+          <!--{eval $syaidtable='forum_attachment_'.$thread[tid]%10;}-->
+          <!--{eval $fujian=DB::result_first("SELECT `attachment` FROM ".DB::table($syaidtable)." WHERE tid=$thread[tid] AND isimage=1");}-->
+          <!--{if $fujian}-->
+          <!--{eval $iconurl='data/attachment/forum/'.$fujian}-->
+          <!--{else}-->
+          <!--{eval $iconurl='static/image/common/nophotosmall.gif'}--> 
+          <!--{/if}-->
+          <img src='<!--{$iconurl}-->'></img> 
+			</a>
+			<h1>
+			<a href="forum.php?mod=viewthread&tid=$_G[tid]" id="thread_subject" title="$_G[forum_thread][subject]" class="vt_title">$_G[forum_thread][subject]</a>
+			<!--{if $_G[forum_thread]['digest'] > 0 && $filter != 'digest'}-->
+			<font title="精华帖" color="red">精</font>
+			<!--{/if}-->
+			</h1>
+			<span class="byto"> 浏览 $_G[forum_thread][views] 次 / $_G[forum_thread][replies]条评论 / 软件分类&nbsp;<a href="forum.php?mod=forumdisplay&fid=$_G[fid]" class="vt_type">[ $_G['forum'][name] ]</a></span>
+</div>   
+
+			<div class="vt_titler">
+			
+			   <!--{if $post['invisible'] == 0}-->
+			   <!--{if ($_G['group']['allowrecommend'] || !$_G['uid']) && $_G['setting']['recommendthread']['status']}-->
+						<!--{if !empty($_G['setting']['recommendthread']['addtext'])}-->
+						<a id="recommend_add" class="vt_like" hidefocus="true" href="forum.php?mod=misc&action=recommend&do=add&tid=$_G[tid]&hash={FORMHASH}" {if $_G['uid']}onclick="ajaxmenu(this, 3000, 1, 0, '43', 'recommendupdate({$_G['group']['allowrecommend']})');return false;"{else} onclick="showWindow('login', this.href)"{/if} onmouseover="this.title = $('recommendv_add').innerHTML + ' {lang activity_member_unit}喜欢'"><span id="recommendv_add">$_G[forum_thread][recommend_add]</span></a>
+						<!--{/if}-->
+						
+			   <!--{/if}-->
+			   <!--{/if}-->
+			   
+			</div>   
+
+		</div>
+	
 <div class="Post box">
 
 	<div id="sidebar" class="group" style="float:right;">
@@ -230,6 +267,7 @@
 
 		<div class="s-box">
 			<div class="group cl">
+			    <!--{if $_G['adminid'] == 1}-->
 				<!--[if IE 6]>
 				<div style="display:none" class="postBtn">
 				<![endif]-->
@@ -242,6 +280,7 @@
 				<!--[if IE 6]>
 				</div>
 				<![endif]-->
+				<!--{/if}-->
 
 				<h2>热门标签</h2>
 				<p class="cl">
@@ -417,44 +456,6 @@
 
 
 <div class="Lview">
-<div class="Rlsuser">
-<div class="vt_titlel">
-
-			<a href="vip.php">
-          <!--{eval $syaidtable='forum_attachment_'.$thread[tid]%10;}-->
-          <!--{eval $fujian=DB::result_first("SELECT `attachment` FROM ".DB::table($syaidtable)." WHERE tid=$thread[tid] AND isimage=1");}-->
-          <!--{if $fujian}-->
-          <!--{eval $iconurl='data/attachment/forum/'.$fujian}-->
-          <!--{else}-->
-          <!--{eval $iconurl='static/image/common/nophotosmall.gif'}--> 
-          <!--{/if}-->
-          <img src='<!--{$iconurl}-->'></img> 
-			</a>
-			<h1>
-			<a href="forum.php?mod=viewthread&tid=$_G[tid]" id="thread_subject" title="$_G[forum_thread][subject]" class="vt_title">$_G[forum_thread][subject]</a>
-			<!--{if $_G[forum_thread]['digest'] > 0 && $filter != 'digest'}-->
-			<font title="精华帖" color="red">精</font>
-			<!--{/if}-->
-			</h1>
-			<span class="byto"> 浏览 $_G[forum_thread][views] 次 / $_G[forum_thread][replies]条评论 / 软件分类&nbsp;<a href="forum.php?mod=forumdisplay&fid=$_G[fid]" class="vt_type">[ $_G['forum'][name] ]</a></span>
-</div>   
-
-			<div class="vt_titler">
-			
-			   <!--{if $post['invisible'] == 0}-->
-			   <!--{if ($_G['group']['allowrecommend'] || !$_G['uid']) && $_G['setting']['recommendthread']['status']}-->
-						<!--{if !empty($_G['setting']['recommendthread']['addtext'])}-->
-						<a id="recommend_add" class="vt_like" hidefocus="true" href="forum.php?mod=misc&action=recommend&do=add&tid=$_G[tid]&hash={FORMHASH}" {if $_G['uid']}onclick="ajaxmenu(this, 3000, 1, 0, '43', 'recommendupdate({$_G['group']['allowrecommend']})');return false;"{else} onclick="showWindow('login', this.href)"{/if} onmouseover="this.title = $('recommendv_add').innerHTML + ' {lang activity_member_unit}喜欢'"><span id="recommendv_add">$_G[forum_thread][recommend_add]</span></a>
-						<!--{/if}-->
-						
-			   <!--{/if}-->
-			   <!--{/if}-->
-			   
-			</div>   
-
-		</div>
-
-
 
 		<div class="Lvipic">
 			<div class="Lvpleft">

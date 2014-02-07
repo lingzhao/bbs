@@ -69,4 +69,8 @@
 
 .sd .ch { font-size: 25px; padding: 8px 0 5px 10px; color: red; }
 .multipage { padding: 10px 3px; }
+tr.onthis:hover {
+    background: none repeat scroll 0 0 #F9F9F9;
+    cursor: pointer;
+}
 /** end **/

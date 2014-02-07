@@ -89,3 +89,7 @@
 <?PHP exit;?>	1390234181	admin	1	::1	2	默认版块	1	最新中文版 AE/PR/PS/AI/ID/DW/LR/FL/CS6CC官方原版中文Mac/PC版	EDT			
 <?PHP exit;?>	1390234373	admin	1	::1	2	默认版块	1	最新中文版 AE/PR/PS/AI/ID/DW/LR/FL/CS6CC官方原版中文Mac/PC版	EDT			
 <?PHP exit;?>	1390572496	admin	1	::1	2	默认版块	3	test111	EDT			
+<?PHP exit;?>	1390913715	admin	1	::1	2	默认版块	6	tst3242343242342432423423432	EDT			
+<?PHP exit;?>	1390913885	admin	1	::1	2	默认版块	6	tst3242343242342432423423432	EDT			
+<?PHP exit;?>	1390914406	admin	1	::1	2	默认版块	6	tst3242343242342432423423432	EDT			
+<?PHP exit;?>	1390914546	admin	1	::1	2	默认版块	6	tst3242343242342432423423432	EDT			

@@ -1,0 +1,42 @@
+<link href="template/xiazai_flxx/style.css" rel="stylesheet" type="text/css" />
+<div class="dingcai"> 
+
+<!-- Baidu Button BEGIN -->
+   <div class="bdshare_t bds_tools_32 get-codes-bdshare" id="bdshare"> 
+      <a class="bds_qzone"></a> <a class="bds_tsina"></a> <a class="bds_tqq"></a> 
+      <a class="bds_renren"></a> <a class="bds_kaixin001"></a> 
+      <a class="bds_tqf"></a> <a class="bds_t163"></a> 
+      <span class="bds_more">更多</span> <a class="shareCount"></a> 
+   </div>
+   <script data="type=tools&uid=612638" id="bdshare_js" type="text/javascript"></script> 
+   <script id="bdshell_js" type="text/javascript"></script> 
+   <script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+   </script> 
+
+<!-- Baidu Button END -->
+</div>
+<div id="down_info"> 
+   <h1>基本信息</h1> 
+   <div id="down_info_box"> 
+      <dl><dt> 
+         <ul class="soft_info">
+		    <li><span>软件版本：[no7value] [no7unit]</span> </li>
+            <li><span>软件大小：[no2value]MB</span> </li>
+            <li><span>软件语言：[no3value] [no3unit]</span></li>
+            <li><span>系统要求：<em style="color:#CC0000;">[no10value] [no10unit]</em></span> </li>
+			<li><span><em style="color:#FF0000;">软件原价：[no1value]</em></span> </li>
+         </ul></dt> 
+      </dl>
+      <div class="down_info_right"> 
+         <div id="down_dizhi_but"> 
+
+            <p class="down_li"><a href="[no11value] [no11unit]" class="down_li_cishu" onfocus="this.blur()"target="_blank"><span>已有 
+            <script>
+document.write("<b>"+Math.random().toString().slice(-3)+"</b>");
+            </script> 次下载</span></a> <a href="[no11value] [no11unit]" class="down_li_url" onfocus="this.blur()" title="更多下载地址"target="_blank"></a> </p>
+         </div>
+      </div>
+      <div class="clear"></div>
+   </div>
+</div>

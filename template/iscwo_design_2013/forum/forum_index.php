@@ -2,8 +2,8 @@
 
 if(!defined('IN_DISCUZ')) {exit('Access Denied');}
 
-$perpage = 9;			//每页显示数
-$forumids = array(2,45);	//指定调用的版块ID，如果调用全部，请用array()，如$forumids = array();
+$perpage = 18;			//每页显示数
+$forumids = array();	// $forumids = array(2,45); 指定调用的版块ID，如果调用全部，请用array()，如$forumids = array();
 $orderby = 'dateline desc';	//排序方式
 $threadlist = $post = array();
 if (empty($forumids)){
